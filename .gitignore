@@ -10,9 +10,8 @@ __pycache__/
 .pytest_cache/
 
 # Отчеты Allure
-allure-report/
 allure-results/
-allure-*/
+allure-2.9.0/
 # IDE
 .idea/
 .vscode/

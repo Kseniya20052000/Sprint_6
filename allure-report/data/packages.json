@@ -1,0 +1,169 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "tests",
+    "children" : [ {
+      "name" : "test_faq",
+      "children" : [ {
+        "name" : "Вопрос 1: Сколько это стоит? И как оплатить?",
+        "uid" : "a7ab10cf1ed12166",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633196805,
+          "stop" : 1788633196975,
+          "duration" : 170
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Вопрос 2: Хочу сразу несколько самокатов! Так можно?",
+        "uid" : "d19c5862ae056b0c",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633215837,
+          "stop" : 1788633216357,
+          "duration" : 520
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Вопрос 3: Как рассчитывается время аренды?",
+        "uid" : "3da08e0c8b68c39e",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633235256,
+          "stop" : 1788633236106,
+          "duration" : 850
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Вопрос 4: Можно ли заказать самокат прямо на сегодня?",
+        "uid" : "f1443a1c8086fd4d",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633256682,
+          "stop" : 1788633256946,
+          "duration" : 264
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Вопрос 5: Можно ли продлить заказ или вернуть самокат раньше?",
+        "uid" : "3805ac1afc016477",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633276635,
+          "stop" : 1788633277308,
+          "duration" : 673
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Вопрос 6: Вы привозите зарядку вместе с самокатом?",
+        "uid" : "e628a6f31440ab5d",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633295814,
+          "stop" : 1788633296624,
+          "duration" : 810
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Вопрос 7: Можно ли отменить заказ?",
+        "uid" : "9636ea3f1d6130b6",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633314195,
+          "stop" : 1788633314750,
+          "duration" : 555
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Вопрос 8: Я живу за МКАДом, привезёте?",
+        "uid" : "c20a94cc7e02ab90",
+        "parentUid" : "34ef49a5a61528c5c40d0ee4a10e138c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633333988,
+          "stop" : 1788633334814,
+          "duration" : 826
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "34ef49a5a61528c5c40d0ee4a10e138c"
+    }, {
+      "name" : "test_navigation",
+      "children" : [ {
+        "name" : "test_logo_navigation",
+        "uid" : "b894dc3ffe829ae2",
+        "parentUid" : "7a1bcddc3f018d2a3c9826a8cb79975e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633352840,
+          "stop" : 1788633353129,
+          "duration" : 289
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7a1bcddc3f018d2a3c9826a8cb79975e"
+    }, {
+      "name" : "test_order",
+      "children" : [ {
+        "name" : "Заказ через кнопку header: Анна Сидорова",
+        "uid" : "920734d109eda517",
+        "parentUid" : "6afe3f8710b5c3bd4ec17bcaea706a5a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633372476,
+          "stop" : 1788633375398,
+          "duration" : 2922
+        },
+        "flaky" : false,
+        "parameters" : [ "'ул. Пушкина, 15'", "'black'", "'Позвонить за час'", "'header'", "'Преображенская площадь'", "'Анна'", "'Сидорова'" ]
+      }, {
+        "name" : "Заказ через кнопку footer: Иван Петров",
+        "uid" : "eb9b1a817ca46576",
+        "parentUid" : "6afe3f8710b5c3bd4ec17bcaea706a5a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633393296,
+          "stop" : 1788633400976,
+          "duration" : 7680
+        },
+        "flaky" : false,
+        "parameters" : [ "'ул. Ленина, 1'", "'grey'", "'Не звонить'", "'footer'", "'Сокольники'", "'Иван'", "'Петров'" ]
+      } ],
+      "uid" : "6afe3f8710b5c3bd4ec17bcaea706a5a"
+    }, {
+      "name" : "test_yandex_logo_redirect",
+      "children" : [ {
+        "name" : "test_yandex_logo_redirect",
+        "uid" : "cfdfed550956d42d",
+        "parentUid" : "c1c8cd10bf7bfa92260975dce8b1f975",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788633417503,
+          "stop" : 1788633426211,
+          "duration" : 8708
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c1c8cd10bf7bfa92260975dce8b1f975"
+    } ],
+    "uid" : "bf49149a3821e34f7608bb6885d52868"
+  } ]
+}
