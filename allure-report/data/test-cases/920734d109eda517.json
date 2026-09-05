@@ -1,0 +1,308 @@
+{
+  "uid" : "920734d109eda517",
+  "name" : "Заказ через кнопку header: Анна Сидорова",
+  "fullName" : "tests.test_order.TestOrderFlow#test_complete_order_flow",
+  "historyId" : "eea4a67f792708c36037a393fea82d82",
+  "time" : {
+    "start" : 1788633372476,
+    "stop" : 1788633375398,
+    "duration" : 2922
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1788633360341,
+      "stop" : 1788633369949,
+      "duration" : 9608
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "main_page",
+    "time" : {
+      "start" : 1788633369949,
+      "stop" : 1788633372472,
+      "duration" : 2523
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1788633184342,
+      "stop" : 1788633184342,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Нажатие на кнопку «Заказать» (header)",
+      "time" : {
+        "start" : 1788633372476,
+        "stop" : 1788633372648,
+        "duration" : 172
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверка отображения формы заказа",
+      "time" : {
+        "start" : 1788633372648,
+        "stop" : 1788633372679,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Заполнение первой формы заказа",
+      "time" : {
+        "start" : 1788633372679,
+        "stop" : 1788633373757,
+        "duration" : 1078
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Нажатие на кнопку «Далее»",
+      "time" : {
+        "start" : 1788633373757,
+        "stop" : 1788633373948,
+        "duration" : 191
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Заполнение второй формы заказа",
+      "time" : {
+        "start" : 1788633373948,
+        "stop" : 1788633375109,
+        "duration" : 1161
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Нажатие на кнопку «Заказать» во второй форме",
+      "time" : {
+        "start" : 1788633375109,
+        "stop" : 1788633375188,
+        "duration" : 79
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Подтверждение заказа в модальном окне",
+      "time" : {
+        "start" : 1788633375188,
+        "stop" : 1788633375267,
+        "duration" : 79
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Проверка успешного оформления заказа",
+      "time" : {
+        "start" : 1788633375267,
+        "stop" : 1788633375292,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "Получение номера заказа",
+      "time" : {
+        "start" : 1788633375292,
+        "stop" : 1788633375315,
+        "duration" : 23
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8bc6ad509ea1da5d",
+        "name" : "Номер заказа",
+        "source" : "8bc6ad509ea1da5d.txt",
+        "type" : "text/plain",
+        "size" : 121
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Нажатие на кнопку «Посмотреть статус»",
+      "time" : {
+        "start" : 1788633375315,
+        "stop" : 1788633375398,
+        "duration" : 83
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 10,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1788633375411,
+      "stop" : 1788633378524,
+      "duration" : 3113
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Оформление заказа"
+  }, {
+    "name" : "story",
+    "value" : "Полное оформление заказа через разные точки входа с разными данными"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrderFlow"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-ITSNTCQ4"
+  }, {
+    "name" : "thread",
+    "value" : "29068-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "address",
+    "value" : "'ул. Пушкина, 15'"
+  }, {
+    "name" : "color",
+    "value" : "'black'"
+  }, {
+    "name" : "comment",
+    "value" : "'Позвонить за час'"
+  }, {
+    "name" : "entry_point",
+    "value" : "'header'"
+  }, {
+    "name" : "metro_station",
+    "value" : "'Преображенская площадь'"
+  }, {
+    "name" : "name",
+    "value" : "'Анна'"
+  }, {
+    "name" : "surname",
+    "value" : "'Сидорова'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "920734d109eda517.json",
+  "parameterValues" : [ "'ул. Пушкина, 15'", "'black'", "'Позвонить за час'", "'header'", "'Преображенская площадь'", "'Анна'", "'Сидорова'" ]
+}

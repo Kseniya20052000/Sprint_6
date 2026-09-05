@@ -1,0 +1,121 @@
+[ {
+  "uid" : "d19c5862ae056b0c",
+  "name" : "Вопрос 2: Хочу сразу несколько самокатов! Так можно?",
+  "time" : {
+    "start" : 1788633215837,
+    "stop" : 1788633216357,
+    "duration" : 520
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a7ab10cf1ed12166",
+  "name" : "Вопрос 1: Сколько это стоит? И как оплатить?",
+  "time" : {
+    "start" : 1788633196805,
+    "stop" : 1788633196975,
+    "duration" : 170
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e628a6f31440ab5d",
+  "name" : "Вопрос 6: Вы привозите зарядку вместе с самокатом?",
+  "time" : {
+    "start" : 1788633295814,
+    "stop" : 1788633296624,
+    "duration" : 810
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cfdfed550956d42d",
+  "name" : "test_yandex_logo_redirect",
+  "time" : {
+    "start" : 1788633417503,
+    "stop" : 1788633426211,
+    "duration" : 8708
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb9b1a817ca46576",
+  "name" : "Заказ через кнопку footer: Иван Петров",
+  "time" : {
+    "start" : 1788633393296,
+    "stop" : 1788633400976,
+    "duration" : 7680
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3da08e0c8b68c39e",
+  "name" : "Вопрос 3: Как рассчитывается время аренды?",
+  "time" : {
+    "start" : 1788633235256,
+    "stop" : 1788633236106,
+    "duration" : 850
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9636ea3f1d6130b6",
+  "name" : "Вопрос 7: Можно ли отменить заказ?",
+  "time" : {
+    "start" : 1788633314195,
+    "stop" : 1788633314750,
+    "duration" : 555
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3805ac1afc016477",
+  "name" : "Вопрос 5: Можно ли продлить заказ или вернуть самокат раньше?",
+  "time" : {
+    "start" : 1788633276635,
+    "stop" : 1788633277308,
+    "duration" : 673
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c20a94cc7e02ab90",
+  "name" : "Вопрос 8: Я живу за МКАДом, привезёте?",
+  "time" : {
+    "start" : 1788633333988,
+    "stop" : 1788633334814,
+    "duration" : 826
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f1443a1c8086fd4d",
+  "name" : "Вопрос 4: Можно ли заказать самокат прямо на сегодня?",
+  "time" : {
+    "start" : 1788633256682,
+    "stop" : 1788633256946,
+    "duration" : 264
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b894dc3ffe829ae2",
+  "name" : "test_logo_navigation",
+  "time" : {
+    "start" : 1788633352840,
+    "stop" : 1788633353129,
+    "duration" : 289
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "920734d109eda517",
+  "name" : "Заказ через кнопку header: Анна Сидорова",
+  "time" : {
+    "start" : 1788633372476,
+    "stop" : 1788633375398,
+    "duration" : 2922
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
