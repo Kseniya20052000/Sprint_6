@@ -1,16 +1,18 @@
+from allure import step
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import ElementClickInterceptedException
+from selenium.common.exceptions import ElementClickInterceptedException, TimeoutException
 from .locators import MainPageLocators
 import random
-from selenium.common.exceptions import TimeoutException
+
 
 class MainPage:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
 
+    @step("Открывает страницу по указанному URL и ждёт полной загрузки DOM")
     def open(self, url):
         """Открывает страницу по указанному URL"""
         self.driver.get(url)
@@ -18,6 +20,7 @@ class MainPage:
             lambda d: d.execute_script("return document.readyState") == "complete"
         )
 
+    @step("Закрывает баннер куки (если присутствует)")
     def close_cookie_banner(self):
         """Закрывает баннер куки, если он есть"""
         try:
@@ -33,6 +36,7 @@ class MainPage:
 
     # --- Точки входа ---
 
+    @step("Кликает на кнопку «Заказать» в шапке сайта")
     def click_order_button_header(self):
         """Кликает на кнопку «Заказать» в шапке сайта"""
         button = self.wait.until(
@@ -40,6 +44,7 @@ class MainPage:
         )
         button.click()
 
+    @step("Кликает на кнопку «Заказать» внизу страницы (с прокруткой и обработкой перекрытия)")
     def click_order_button_footer(self):
         """Кликает на кнопку «Заказать» внизу страницы"""
         self.close_cookie_banner()
@@ -58,6 +63,7 @@ class MainPage:
 
     # --- Первая форма ---
 
+    @step("Проверяет, что форма заказа отображается на странице")
     def is_order_form_visible(self):
         """Проверяет, что форма заказа отображается на странице"""
         try:
@@ -68,6 +74,7 @@ class MainPage:
         except Exception:
             return False
 
+    @step("Получает все элементы формы заказа для дополнительной верификации")
     def get_order_form_elements(self):
         """Получает все элементы формы заказа для дополнительной верификации"""
         elements = {}
@@ -88,6 +95,7 @@ class MainPage:
             pass
         return elements
 
+    @step("Заполняет первую форму заказа (имя, фамилия, адрес, метро, телефон)")
     def fill_order_form(self, name="Иван", surname="Петров", address="ул. Ленина, 1",
                         metro_station="Преображенская площадь"):
         """Заполняет первую форму заказа"""
@@ -144,6 +152,7 @@ class MainPage:
         """Генерирует случайный номер телефона в формате +7XXXXXXXXXX"""
         return f"+7{random.randint(1000000000, 9999999999)}"
 
+    @step("Нажимает кнопку «Далее» на первой форме заказа")
     def click_next_step_button(self):
         """Кликает на кнопку «Далее» на первой форме"""
         next_button = self.wait.until(
@@ -153,10 +162,10 @@ class MainPage:
 
     # --- Вторая форма ---
 
+    @step("Заполняет вторую форму заказа (дата, срок аренды, цвет самоката, комментарий)")
     def fill_second_order_form(self, color="black", comment=":)"):
         """Заполняет вторую форму заказа"""
-        # 1. Выбираем дату 
-        
+        # 1. Выбираем дату
         date_input = self.wait.until(
             EC.element_to_be_clickable(MainPageLocators.DATE_INPUT)
         )
@@ -166,7 +175,6 @@ class MainPage:
             EC.element_to_be_clickable(MainPageLocators.DATE_PICKER_TODAY)
         )
         today_day.click()
-        
 
         # 2. Выбираем срок аренды (сутки)
         rent_dropdown = self.wait.until(
@@ -197,6 +205,7 @@ class MainPage:
         comment_input.clear()
         comment_input.send_keys(comment)
 
+    @step("Нажимает кнопку «Заказать» на второй форме заказа")
     def click_submit_order_button(self):
         """Кликает на кнопку «Заказать» на второй форме"""
         btn_locator = (
@@ -212,6 +221,7 @@ class MainPage:
 
     # --- Модальное окно подтверждения ---
 
+    @step("Подтверждает заказ в модальном окне (нажимает «Да»)")
     def confirm_order_in_modal(self):
         """Подтверждает заказ в модальном окне (нажимает «Да»)"""
         yes_button = self.wait.until(
@@ -219,6 +229,7 @@ class MainPage:
         )
         yes_button.click()
 
+    @step("Проверяет, что модальное окно с успешным оформлением заказа отображается")
     def is_order_success_modal_visible(self):
         """Проверяет, что модальное окно с успешным оформлением заказа отображается"""
         try:
@@ -229,6 +240,7 @@ class MainPage:
         except Exception:
             return False
 
+    @step("Получает номер заказа из модального окна")
     def get_order_number(self):
         """Получает номер заказа из модального окна"""
         try:
@@ -239,6 +251,7 @@ class MainPage:
         except Exception:
             return None
 
+    @step("Нажимает кнопку «Посмотреть статус»")
     def click_status_button(self):
         """Кликает на кнопку «Посмотреть статус»"""
         status_button = self.wait.until(
@@ -248,6 +261,7 @@ class MainPage:
 
     # --- Навигация ---
 
+    @step("Кликает на логотип «Самокат» для перехода на главную")
     def click_logo(self):
         """Кликает на логотип «Самокат»"""
         logo_link = self.wait.until(
@@ -255,12 +269,13 @@ class MainPage:
         )
         logo_link.click()
 
+    @step("Возвращает текущий URL страницы")
     def get_current_url(self):
         """Возвращает текущий URL"""
         return self.driver.current_url
 
-
-    #Яндекс.дзен
+    # Яндекс.Дзен
+    @step("Клик по логотипу Яндекса и переключение на новое окно")
     def click_yandex_logo_and_switch_to_new_window(self):
         """Клик по логотипу Яндекса и переключение на новое окно"""
         logo = self.wait.until(
@@ -283,26 +298,25 @@ class MainPage:
         self.driver.switch_to.window(new_handle)
         return original_handle  # Возвращаем исходный хендл для возврата
 
-        # Новый метод: "Если есть окно с кнопкой 'Да' — закрой его"
-    
+    @step("Пытается закрыть промо-окно (если есть кнопка «Да»)")
     def close_promo_window_if_present(self):
         """
         Пытается найти и нажать кнопку 'Да' в промо-окне.
         Если окна нет — просто ничего не делает и не падает.
         """
         btn_locator = MainPageLocators.PROMO_WINDOW_YES_BTN
-        
+
         try:
             # 1. Ждём, пока станет кликабельной
             btn_yes = self.wait.until(EC.element_to_be_clickable(btn_locator))
-            
+
             # 2. Клик через JS (чтобы обойти перекрытие анимацией)
             self.driver.execute_script("arguments[0].click();", btn_yes)
-            
+
             # 3. Ждём, пока кнопка реально исчезнет из DOM
             self.wait.until(EC.invisibility_of_element_located(btn_locator))
-            print("Промо-окно закрыто") # Для отладки в консоли
-            
+            print("Промо-окно закрыто")  # Для отладки в консоли
+
         except TimeoutException:
             # Кнопки нет — это нормально, продолжаем работу
             pass

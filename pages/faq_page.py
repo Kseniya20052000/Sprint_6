@@ -1,3 +1,4 @@
+from allure import step
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,6 +10,7 @@ class FAQPage:
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
 
+    @step("Проверяю, что раздел FAQ отображается на странице")
     def is_faq_section_displayed(self):
         """Проверяет отображение раздела FAQ"""
         section = self.wait.until(
@@ -18,6 +20,7 @@ class FAQPage:
 
     # --- Вопрос 1 ---
 
+    @step("Кликаю на первый вопрос FAQ через JS (с прокруткой)")
     def click_question_1(self):
         """Кликает на первый вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(
@@ -29,6 +32,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Получаю текст ответа на первый вопрос FAQ")
     def get_answer_1_text(self):
         """Получает текст ответа на первый вопрос"""
         try:
@@ -39,6 +43,7 @@ class FAQPage:
 
     # --- Вопрос 2 ---
 
+    @step("Кликаю на второй вопрос FAQ через JS (с прокруткой)")
     def click_question_2(self):
         """Кликает на второй вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(EC.visibility_of_element_located(FAQPageLocators.QUESTION_2_BUTTON))
@@ -48,6 +53,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Проверяю, раскрыт ли второй вопрос FAQ (по aria-expanded)")
     def is_second_question_expanded(self):
         """Проверяет, раскрыт ли второй вопрос (по атрибуту aria-expanded)"""
         try:
@@ -57,6 +63,7 @@ class FAQPage:
         except Exception:
             return False
 
+    @step("Получаю текст ответа на второй вопрос FAQ")
     def get_answer_2_text(self):
         """Получает текст ответа на второй вопрос"""
         try:
@@ -67,6 +74,7 @@ class FAQPage:
 
     # --- Вопрос 3 ---
 
+    @step("Кликаю на третий вопрос FAQ через JS (с прокруткой)")
     def click_question_3(self):
         """Кликает на третий вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(EC.visibility_of_element_located(FAQPageLocators.QUESTION_3_BUTTON))
@@ -76,6 +84,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Проверяю, раскрыт ли третий вопрос FAQ (по aria-expanded)")
     def is_third_question_expanded(self):
         """Проверяет, раскрыт ли третий вопрос (по атрибуту aria-expanded)"""
         try:
@@ -85,6 +94,7 @@ class FAQPage:
         except Exception:
             return False
 
+    @step("Получаю текст ответа на третий вопрос FAQ")
     def get_answer_3_text(self):
         """Получает текст ответа на третий вопрос"""
         try:
@@ -95,6 +105,7 @@ class FAQPage:
 
     # --- Вопрос 4 ---
 
+    @step("Кликаю на четвёртый вопрос FAQ через JS (с прокруткой)")
     def click_question_4(self):
         """Кликает на четвёртый вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(EC.visibility_of_element_located(FAQPageLocators.QUESTION_4_BUTTON))
@@ -104,6 +115,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Проверяю, раскрыт ли четвёртый вопрос FAQ (по aria-expanded)")
     def is_fourth_question_expanded(self):
         """Проверяет, раскрыт ли четвёртый вопрос (по атрибуту aria-expanded)"""
         try:
@@ -113,6 +125,7 @@ class FAQPage:
         except Exception:
             return False
 
+    @step("Получаю текст ответа на четвёртый вопрос FAQ")
     def get_answer_4_text(self):
         """Получает текст ответа на четвёртый вопрос"""
         try:
@@ -123,6 +136,7 @@ class FAQPage:
 
     # --- Вопрос 5 ---
 
+    @step("Кликаю на пятый вопрос FAQ через JS (с прокруткой)")
     def click_question_5(self):
         """Кликает на пятый вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(EC.visibility_of_element_located(FAQPageLocators.QUESTION_5_BUTTON))
@@ -132,6 +146,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Проверяю, раскрыт ли пятый вопрос FAQ (по aria-expanded)")
     def is_fifth_question_expanded(self):
         """Проверяет, раскрыт ли пятый вопрос (по атрибуту aria-expanded)"""
         try:
@@ -141,6 +156,7 @@ class FAQPage:
         except Exception:
             return False
 
+    @step("Получаю текст ответа на пятый вопрос FAQ")
     def get_answer_5_text(self):
         """Получает текст ответа на пятый вопрос"""
         try:
@@ -151,6 +167,7 @@ class FAQPage:
 
     # --- Вопрос 6 ---
 
+    @step("Кликаю на шестой вопрос FAQ через JS (с прокруткой)")
     def click_question_6(self):
         """Кликает на шестой вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(EC.visibility_of_element_located(FAQPageLocators.QUESTION_6_BUTTON))
@@ -160,6 +177,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Проверяю, раскрыт ли шестой вопрос FAQ (по aria-expanded)")
     def is_sixth_question_expanded(self):
         """Проверяет, раскрыт ли шестой вопрос (по атрибуту aria-expanded)"""
         try:
@@ -169,6 +187,7 @@ class FAQPage:
         except Exception:
             return False
 
+    @step("Получаю текст ответа на шестой вопрос FAQ")
     def get_answer_6_text(self):
         """Получает текст ответа на шестой вопрос"""
         try:
@@ -179,6 +198,7 @@ class FAQPage:
 
     # --- Вопрос 7 ---
 
+    @step("Кликаю на седьмой вопрос FAQ через JS (с прокруткой)")
     def click_question_7(self):
         """Кликает на седьмой вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(EC.visibility_of_element_located(FAQPageLocators.QUESTION_7_BUTTON))
@@ -188,6 +208,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Проверяю, раскрыт ли седьмой вопрос FAQ (по aria-expanded)")
     def is_seventh_question_expanded(self):
         """Проверяет, раскрыт ли седьмой вопрос (по атрибуту aria-expanded)"""
         try:
@@ -197,6 +218,7 @@ class FAQPage:
         except Exception:
             return False
 
+    @step("Получаю текст ответа на седьмой вопрос FAQ")
     def get_answer_7_text(self):
         """Получает текст ответа на седьмой вопрос"""
         try:
@@ -207,6 +229,7 @@ class FAQPage:
 
     # --- Вопрос 8 ---
 
+    @step("Кликаю на восьмой вопрос FAQ через JS (с прокруткой)")
     def click_question_8(self):
         """Кликает на восьмой вопрос через JS после прокрутки к элементу"""
         button = self.wait.until(EC.visibility_of_element_located(FAQPageLocators.QUESTION_8_BUTTON))
@@ -216,6 +239,7 @@ class FAQPage:
         )
         self.driver.execute_script("arguments[0].click();", button)
 
+    @step("Проверяю, раскрыт ли восьмой вопрос FAQ (по aria-expanded)")
     def is_eighth_question_expanded(self):
         """Проверяет, раскрыт ли восьмой вопрос (по атрибуту aria-expanded)"""
         try:
@@ -225,6 +249,7 @@ class FAQPage:
         except Exception:
             return False
 
+    @step("Получаю текст ответа на восьмой вопрос FAQ")
     def get_answer_8_text(self):
         """Получает текст ответа на восьмой вопрос"""
         try:
