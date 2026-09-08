@@ -2,27 +2,11 @@ from selenium.webdriver.common.by import By
 
 class FAQPageLocators:
     # Общие локаторы
-    FAQ_SECTION = (By.XPATH, "//div[contains(text(), 'Вопросы о важном')]")  # для раздела FAQ
+    FAQ_SECTION = (By.XPATH, "//div[contains(text(), 'Вопросы о важном')]")
 
-    # Локаторы для вопросов
-    QUESTION_1_BUTTON = (By.ID, "accordion__heading-0")
-    QUESTION_2_BUTTON = (By.ID, "accordion__heading-1")
-    QUESTION_3_BUTTON = (By.ID, "accordion__heading-2")
-    QUESTION_4_BUTTON = (By.ID, "accordion__heading-3")
-    QUESTION_5_BUTTON = (By.ID, "accordion__heading-4")
-    QUESTION_6_BUTTON = (By.ID, "accordion__heading-5")
-    QUESTION_7_BUTTON = (By.ID, "accordion__heading-6")
-    QUESTION_8_BUTTON = (By.ID, "accordion__heading-7")
-
-    # Локаторы для ответов
-    ANSWER_1_TEXT = (By.ID, "accordion__panel-0")
-    ANSWER_2_TEXT = (By.ID, "accordion__panel-1")
-    ANSWER_3_TEXT = (By.ID, "accordion__panel-2")
-    ANSWER_4_TEXT = (By.ID, "accordion__panel-3")
-    ANSWER_5_TEXT = (By.ID, "accordion__panel-4")
-    ANSWER_6_TEXT = (By.ID, "accordion__panel-5")
-    ANSWER_7_TEXT = (By.ID, "accordion__panel-6")
-    ANSWER_8_TEXT = (By.ID, "accordion__panel-7")
+    # Универсальные локаторы — индекс подставляется через .format()
+    QUESTION_BUTTON = (By.ID, "accordion__heading-{}")
+    ANSWER_PANEL = (By.ID, "accordion__panel-{}")
 
 class MainPageLocators:
     # Локатор для кнопки «Заказать» в шапке сайта 
