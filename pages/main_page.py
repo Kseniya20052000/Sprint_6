@@ -1,36 +1,23 @@
-from allure import step
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import ElementClickInterceptedException, TimeoutException
-from locators import MainPageLocators
 import random
+from allure import step
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
+from locators import MainPageLocators
+from pages.base_page import BasePage
+from selenium.webdriver.support import expected_conditions as EC
 
-
-class MainPage:
-    def __init__(self, driver):
-        self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+class MainPage(BasePage):
 
     @step("Открывает страницу по указанному URL и ждёт полной загрузки DOM")
     def open(self, url):
-        """Открывает страницу по указанному URL"""
-        self.driver.get(url)
-        self.wait.until(
-            lambda d: d.execute_script("return document.readyState") == "complete"
-        )
+        self.open_url(url)
 
     @step("Закрывает баннер куки (если присутствует)")
     def close_cookie_banner(self):
-        """Закрывает баннер куки, если он есть"""
+        cookie_locator = (By.ID, "rcc-confirm-button")
         try:
-            cookie_button = WebDriverWait(self.driver, 5).until(
-                EC.element_to_be_clickable((By.ID, "rcc-confirm-button"))
-            )
-            cookie_button.click()
-            WebDriverWait(self.driver, 5).until(
-                EC.invisibility_of_element_located((By.ID, "rcc-confirm-button"))
-            )
+            self.click(cookie_locator, timeout=5)
+            self.wait_until_invisible(cookie_locator, timeout=5)
         except Exception:
             pass
 
@@ -38,59 +25,29 @@ class MainPage:
 
     @step("Кликает на кнопку «Заказать» в шапке сайта")
     def click_order_button_header(self):
-        """Кликает на кнопку «Заказать» в шапке сайта"""
-        button = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.ORDER_BUTTON_HEADER)
-        )
-        button.click()
+        self.click(MainPageLocators.ORDER_BUTTON_HEADER)
 
     @step("Кликает на кнопку «Заказать» внизу страницы (с прокруткой и обработкой перекрытия)")
     def click_order_button_footer(self):
-        """Кликает на кнопку «Заказать» внизу страницы"""
         self.close_cookie_banner()
-
-        button = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.ORDER_BUTTON_FOOTER)
-        )
-        self.driver.execute_script(
-            "arguments[0].scrollIntoView({block: 'center'});", button
-        )
-
-        try:
-            button.click()
-        except ElementClickInterceptedException:
-            self.driver.execute_script("arguments[0].click();", button)
+        button = self.find_clickable(MainPageLocators.ORDER_BUTTON_FOOTER)
+        self.scroll_to_element(button)
+        self.click(button)
 
     # --- Первая форма ---
 
     @step("Проверяет, что форма заказа отображается на странице")
     def is_order_form_visible(self):
-        """Проверяет, что форма заказа отображается на странице"""
-        try:
-            form = self.wait.until(
-                EC.visibility_of_element_located(MainPageLocators.ORDER_FORM)
-            )
-            return form.is_displayed()
-        except Exception:
-            return False
+        return self.is_displayed(MainPageLocators.ORDER_FORM)
 
     @step("Получает все элементы формы заказа для дополнительной верификации")
     def get_order_form_elements(self):
-        """Получает все элементы формы заказа для дополнительной верификации"""
         elements = {}
         try:
-            elements['name_input'] = self.wait.until(
-                EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_NAME)
-            )
-            elements['surname_input'] = self.wait.until(
-                EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_SURNAME)
-            )
-            elements['address_input'] = self.wait.until(
-                EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_ADDRESS)
-            )
-            elements['phone_input'] = self.wait.until(
-                EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_PHONE)
-            )
+            elements['name_input'] = self.find_present(MainPageLocators.ORDER_INPUT_NAME)
+            elements['surname_input'] = self.find_present(MainPageLocators.ORDER_INPUT_SURNAME)
+            elements['address_input'] = self.find_present(MainPageLocators.ORDER_INPUT_ADDRESS)
+            elements['phone_input'] = self.find_present(MainPageLocators.ORDER_INPUT_PHONE)
         except Exception:
             pass
         return elements
@@ -98,225 +55,134 @@ class MainPage:
     @step("Заполняет первую форму заказа (имя, фамилия, адрес, метро, телефон)")
     def fill_order_form(self, name="Иван", surname="Петров", address="ул. Ленина, 1",
                         metro_station="Преображенская площадь"):
-        """Заполняет первую форму заказа"""
         self.close_cookie_banner()
 
-        name_input = self.wait.until(
-            EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_NAME)
-        )
-        name_input.clear()
-        name_input.send_keys(name)
-
-        surname_input = self.wait.until(
-            EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_SURNAME)
-        )
-        surname_input.clear()
-        surname_input.send_keys(surname)
-
-        address_input = self.wait.until(
-            EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_ADDRESS)
-        )
-        address_input.clear()
-        address_input.send_keys(address)
+        self.type_text(MainPageLocators.ORDER_INPUT_NAME, name)
+        self.type_text(MainPageLocators.ORDER_INPUT_SURNAME, surname)
+        self.type_text(MainPageLocators.ORDER_INPUT_ADDRESS, address)
 
         # --- Выбор станции метро ---
-        metro_input = self.wait.until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, "input.select-search__input"))
-        )
-        metro_input.click()
-
-        self.wait.until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, "div.select-search__select"))
-        )
-
+        metro_input_locator = (By.CSS_SELECTOR, "input.select-search__input")
+        metro_dropdown_locator = (By.CSS_SELECTOR, "div.select-search__select")
         option_locator = (
             By.XPATH,
             f"//div[contains(@class, 'select-search__select')]//*[normalize-space()='{metro_station}']"
         )
-        option_element = self.wait.until(EC.element_to_be_clickable(option_locator))
-        option_element.click()
 
-        self.wait.until(
-            EC.invisibility_of_element_located((By.CSS_SELECTOR, "div.select-search__select"))
-        )
+        self.click(metro_input_locator)
+        self.find_visible(metro_dropdown_locator)
+        self.click(option_locator)
+        self.wait_until_invisible(metro_dropdown_locator)
 
         # --- Телефон ---
         phone = self._generate_random_phone()
-        phone_input = self.wait.until(
-            EC.presence_of_element_located(MainPageLocators.ORDER_INPUT_PHONE)
-        )
-        phone_input.clear()
-        phone_input.send_keys(phone)
+        self.type_text(MainPageLocators.ORDER_INPUT_PHONE, phone)
 
     def _generate_random_phone(self):
-        """Генерирует случайный номер телефона в формате +7XXXXXXXXXX"""
         return f"+7{random.randint(1000000000, 9999999999)}"
 
     @step("Нажимает кнопку «Далее» на первой форме заказа")
     def click_next_step_button(self):
-        """Кликает на кнопку «Далее» на первой форме"""
-        next_button = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.NEXT_BUTTON)
-        )
-        next_button.click()
+        self.click(MainPageLocators.NEXT_BUTTON)
 
     # --- Вторая форма ---
 
     @step("Заполняет вторую форму заказа (дата, срок аренды, цвет самоката, комментарий)")
     def fill_second_order_form(self, color="black", comment=":)"):
-        """Заполняет вторую форму заказа"""
-        # 1. Выбираем дату
-        date_input = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.DATE_INPUT)
-        )
-        date_input.click()
+        # 1. Дата
+        self.click(MainPageLocators.DATE_INPUT)
+        self.click(MainPageLocators.DATE_PICKER_TODAY)
 
-        today_day = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.DATE_PICKER_TODAY)
-        )
-        today_day.click()
+        # 2. Срок аренды
+        self.click(MainPageLocators.RENT_PERIOD_DROPDOWN)
+        self.click(MainPageLocators.RENT_PERIOD_OPTION)
 
-        # 2. Выбираем срок аренды (сутки)
-        rent_dropdown = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.RENT_PERIOD_DROPDOWN)
-        )
-        rent_dropdown.click()
-
-        rent_option = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.RENT_PERIOD_OPTION)
-        )
-        rent_option.click()
-
-        # 3. Выбираем цвет самоката
+        # 3. Цвет самоката
         if color == "black":
-            color_checkbox = self.wait.until(
-                EC.element_to_be_clickable(MainPageLocators.COLOR_BLACK_CHECKBOX)
-            )
+            self.click(MainPageLocators.COLOR_BLACK_CHECKBOX)
         else:
-            color_checkbox = self.wait.until(
-                EC.element_to_be_clickable(MainPageLocators.COLOR_GREY_CHECKBOX)
-            )
-        color_checkbox.click()
+            self.click(MainPageLocators.COLOR_GREY_CHECKBOX)
 
-        # 4. Вводим комментарий
-        comment_input = self.wait.until(
-            EC.presence_of_element_located(MainPageLocators.COMMENT_INPUT)
-        )
-        comment_input.clear()
-        comment_input.send_keys(comment)
+        # 4. Комментарий
+        self.type_text(MainPageLocators.COMMENT_INPUT, comment)
 
     @step("Нажимает кнопку «Заказать» на второй форме заказа")
     def click_submit_order_button(self):
-        """Кликает на кнопку «Заказать» на второй форме"""
-        btn_locator = (
-            By.XPATH,
-            "//div[contains(@class, 'Order_Buttons')]//button[normalize-space()='Заказать']"
-        )
-        btn = self.wait.until(EC.element_to_be_clickable(btn_locator))
-
-        try:
-            btn.click()
-        except Exception:
-            self.driver.execute_script("arguments[0].click();", btn)
+        self.click(MainPageLocators.CONFIRM_ORDER_BUTTON)
 
     # --- Модальное окно подтверждения ---
 
     @step("Подтверждает заказ в модальном окне (нажимает «Да»)")
     def confirm_order_in_modal(self):
-        """Подтверждает заказ в модальном окне (нажимает «Да»)"""
-        yes_button = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.MODAL_CONFIRM_YES)
-        )
-        yes_button.click()
+        self.click(MainPageLocators.MODAL_CONFIRM_YES)
 
     @step("Проверяет, что модальное окно с успешным оформлением заказа отображается")
     def is_order_success_modal_visible(self):
-        """Проверяет, что модальное окно с успешным оформлением заказа отображается"""
-        try:
-            modal = self.wait.until(
-                EC.visibility_of_element_located(MainPageLocators.ORDER_SUCCESS_MODAL)
-            )
-            return modal.is_displayed()
-        except Exception:
-            return False
+        return self.is_displayed(MainPageLocators.ORDER_SUCCESS_MODAL)
 
     @step("Получает номер заказа из модального окна")
     def get_order_number(self):
-        """Получает номер заказа из модального окна"""
         try:
-            order_number_element = self.wait.until(
-                EC.visibility_of_element_located(MainPageLocators.ORDER_NUMBER)
-            )
-            return order_number_element.text
+            return self.get_text(MainPageLocators.ORDER_NUMBER)
         except Exception:
             return None
 
     @step("Нажимает кнопку «Посмотреть статус»")
     def click_status_button(self):
-        """Кликает на кнопку «Посмотреть статус»"""
-        status_button = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.STATUS_BUTTON)
-        )
-        status_button.click()
+        self.click(MainPageLocators.STATUS_BUTTON)
 
     # --- Навигация ---
 
     @step("Кликает на логотип «Самокат» для перехода на главную")
     def click_logo(self):
-        """Кликает на логотип «Самокат»"""
-        logo_link = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.LOGO_LINK)
-        )
-        logo_link.click()
+        self.click(MainPageLocators.LOGO_LINK)
 
     @step("Возвращает текущий URL страницы")
     def get_current_url(self):
-        """Возвращает текущий URL"""
-        return self.driver.current_url
+        return super().get_current_url()
 
     # Яндекс.Дзен
-    @step("Клик по логотипу Яндекса и переключение на новое окно")
-    def click_yandex_logo_and_switch_to_new_window(self):
-        """Клик по логотипу Яндекса и переключение на новое окно"""
-        logo = self.wait.until(
-            EC.element_to_be_clickable(MainPageLocators.YANDEX_LOGO)
-        )
-        original_handle = self.driver.current_window_handle
-        original_count = len(self.driver.window_handles)
 
-        logo.click()
 
-        # Ждём появления нового окна
-        WebDriverWait(self.driver, 15).until(
-            lambda d: len(d.window_handles) > original_count
-        )
+    @step("Клик по логотипу Яндекса и переключение на Дзен")
+    def go_to_dzen(self):
+        original = self.driver.current_window_handle
+    
+        self.driver.find_element(*MainPageLocators.YANDEX_LOGO).click()
+    
+        import time
+        for _ in range(30):
+            if len(self.driver.window_handles) > 1:
+                break
+            time.sleep(1)
+    
+        for h in self.driver.window_handles:
+            if h != original:
+                self.driver.switch_to.window(h)
+                break
+    
+        # Ждём, пока URL сменится с about:blank на dzen.ru
+        for _ in range(30):
+            if "dzen.ru" in self.driver.current_url:
+                break
+            time.sleep(1)
+    
+        return original
 
-        # Ищем новый хендл
-        new_handle = next(
-            h for h in self.driver.window_handles if h != original_handle
-        )
-        self.driver.switch_to.window(new_handle)
-        return original_handle  # Возвращаем исходный хендл для возврата
 
-    @step("Пытается закрыть промо-окно (если есть кнопка «Да»)")
-    def close_promo_window_if_present(self):
-        """
-        Пытается найти и нажать кнопку 'Да' в промо-окне.
-        Если окна нет — просто ничего не делает и не падает.
-        """
-        btn_locator = MainPageLocators.PROMO_WINDOW_YES_BTN
-
+    @step("Закрывает всплывающее окно на Дзене (крестик)")
+    def close_dzen_popup(self, timeout=15):
         try:
-            # 1. Ждём, пока станет кликабельной
-            btn_yes = self.wait.until(EC.element_to_be_clickable(btn_locator))
+            btn = self.wait.until(
+                EC.element_to_be_clickable(MainPageLocators.DZEN_CLOSE_BTN),
+                timeout=timeout
+            )
+            self.driver.execute_script("arguments[0].click();", btn)
+            return True
+        except Exception:
+            return False
 
-            # 2. Клик через JS (чтобы обойти перекрытие анимацией)
-            self.driver.execute_script("arguments[0].click();", btn_yes)
 
-            # 3. Ждём, пока кнопка реально исчезнет из DOM
-            self.wait.until(EC.invisibility_of_element_located(btn_locator))
-            print("Промо-окно закрыто")  # Для отладки в консоли
-
-        except TimeoutException:
-            # Кнопки нет — это нормально, продолжаем работу
-            pass
+    @step("Проверяет, что строка поиска Дзена отображается")
+    def is_search_bar_visible(self):
+        return self.is_displayed(MainPageLocators.SEARCH_BAR, timeout=15)

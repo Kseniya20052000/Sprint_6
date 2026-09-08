@@ -81,5 +81,5 @@ class MainPageLocators:
     YANDEX_LOGO = (By.CSS_SELECTOR, "a.Header_LogoYandex__3TSOI")
     DZHEN_LOGO = (By.XPATH, "//svg[contains(@class, 'dzen-layout--desktop-base-header__logoWithText-3k')]")
 
-    PROMO_WINDOW_YES_BTN = (By.XPATH, "//a[normalize-space()='Да']")
+    DZEN_CLOSE_BTN = (By.XPATH, "//span[@aria-label='Закрыть']")
     SEARCH_BAR = (By.CSS_SELECTOR, ".dzen-search-arrow-common__arrow")

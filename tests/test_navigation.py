@@ -1,5 +1,5 @@
 import allure
-from selenium.webdriver.support.ui import WebDriverWait
+
 
 
 @allure.feature("Навигация по сайту")
@@ -14,8 +14,7 @@ def test_logo_navigation(main_page, base_url):
     4. Проверяем, что URL совпадает с base_url.
     """
     with allure.step("Открытие главной страницы сайта"):        
-        assert main_page.get_current_url() == base_url, \
-            f"Ожидался URL: {base_url}, но получен: {main_page.get_current_url()}"
+        assert main_page.get_current_url() == base_url
 
     with allure.step("Нажатие на кнопку «Заказать» в шапке сайта"):
         main_page.click_order_button_header()
@@ -24,8 +23,4 @@ def test_logo_navigation(main_page, base_url):
         main_page.click_logo()
 
     with allure.step("Проверка, что мы вернулись на главную страницу"):
-        WebDriverWait(main_page.driver, 15).until(
-            lambda d: d.current_url == base_url
-        )
-        assert main_page.get_current_url() == base_url, \
-            f"Ожидался URL: {base_url}, но получен: {main_page.get_current_url()}"
+        assert main_page.get_current_url() == base_url
