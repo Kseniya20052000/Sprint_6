@@ -25,8 +25,8 @@ class FAQPageLocators:
     ANSWER_8_TEXT = (By.ID, "accordion__panel-7")
 
 class MainPageLocators:
-    # Локатор для кнопки «Заказать» в шапке сайта (используем класс как наиболее стабильный селектор)
-    ORDER_BUTTON_HEADER = (By.CSS_SELECTOR, "button.Button_Button__ra12g")
+    # Локатор для кнопки «Заказать» в шапке сайта 
+    ORDER_BUTTON_HEADER = (By.XPATH, "//div[contains(@class, 'Header_Nav')]//button[normalize-space()='Заказать']")
 
     # Локатор для формы заказа на странице заказа
     ORDER_FORM = (By.CLASS_NAME, "Order_Form__17u6u")
@@ -35,17 +35,17 @@ class MainPageLocators:
     ORDER_INPUT_NAME = (By.XPATH, "//input[@placeholder='* Имя']")
     ORDER_INPUT_SURNAME = (By.XPATH, "//input[@placeholder='* Фамилия']")
     ORDER_INPUT_ADDRESS = (By.XPATH, "//input[@placeholder='* Адрес: куда привезти заказ']")
-    ORDER_INPUT_PHONE = (By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']")
+    ORDER_INPUT_PHONE = (By.XPATH, "//input[@type='text' and following-sibling::div[contains(text(), 'Введите корректный номер')]]")
 
     # Локатор для кнопки «Заказать» в нижней части сайта
-    ORDER_BUTTON_FOOTER = (By.CSS_SELECTOR, "button.Button_Button__ra12g.Button_Middle__1CSJM")
+    ORDER_BUTTON_FOOTER = (By.XPATH, "//div[contains(@class, 'Home_FinishButton')]//button[normalize-space()='Заказать']")
 
 
     # Локатор для поля «Станция метро»
     METRO_STATION_INPUT = (By.XPATH, "//div[@class='select-search__value']//input[@placeholder='* Станция метро']")
 
     # Локатор для кнопки «Далее»
-    NEXT_BUTTON = (By.CSS_SELECTOR, "button.Button_Button__ra12g.Button_Middle__1CSJM")
+    NEXT_BUTTON = (By.XPATH, "//div[contains(@class, 'Order_NextButton')]//button[normalize-space()='Далее']")
 
     # Локатор для элемента в списке станций метро (конкретная станция)
     METRO_STATION_OPTION = (By.XPATH, "//li[contains(text(), 'Преображенская площадь')]")
@@ -63,7 +63,7 @@ class MainPageLocators:
 
     COMMENT_INPUT = (By.XPATH, "//input[@placeholder='Комментарий для курьера']")
 
-    CONFIRM_ORDER_BUTTON = (By.CSS_SELECTOR, "button.Button_Button__ra12g.Button_Middle__1CSJM")
+    CONFIRM_ORDER_BUTTON = (By.XPATH, "//div[contains(@class, 'Order_Buttons')]//button[normalize-space()='Заказать']")
 
     # Локаторы для модального окна подтверждения
     MODAL_CONFIRM_NO = (By.XPATH, "//button[contains(text(), 'Нет')]")
