@@ -2,7 +2,7 @@ from allure import step
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from .locators import FAQPageLocators
+from locators import FAQPageLocators
 
 
 class FAQPage:
