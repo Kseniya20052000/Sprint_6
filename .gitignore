@@ -16,5 +16,5 @@ allure-2.9.0/
 .idea/
 .vscode/
 *.swp
-
+geckodriver.exe
 .env

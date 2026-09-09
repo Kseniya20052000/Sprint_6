@@ -6,15 +6,20 @@ from pages.faq_page import FAQPage
 from pages.main_page import MainPage
 from dotenv import load_dotenv
 import os
+
+
 # Загружаем переменные из .env при старте pytest
 load_dotenv()
 
 @pytest.fixture(scope="function")
 def driver():
-    service = FirefoxService(GeckoDriverManager().install())
-    driver = webdriver.Firefox(service=service)
-    yield driver
-    driver.quit()
+    
+    driver_path = os.path.join(os.getcwd(), "geckodriver.exe")
+
+    service = FirefoxService(executable_path=driver_path)
+    browser = webdriver.Firefox(service=service)
+    yield browser
+    browser.quit()
 
 
 @pytest.fixture
