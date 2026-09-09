@@ -1,5 +1,4 @@
 import allure
-import time
 from pages.main_page import MainPage
 
 
@@ -13,10 +12,9 @@ def test_yandex_logo_redirect(driver, base_url):
         original_handle = main_page.go_to_dzen()
 
     try:
-        with allure.step("Закрываем всплывающее окно на Дзене"):
-            closed = main_page.close_dzen_popup(timeout=15)
-            if closed:
-                time.sleep(1)
+        with allure.step("Попытка закрыть всплывающее окно на Дзене"):
+            # Просто вызываем метод. Если окна нет — он вернёт False, это нормально.
+            main_page.close_dzen_popup(timeout=15)
 
         with allure.step("Проверка URL"):
             assert "dzen.ru" in driver.current_url, f"Ожидался dzen.ru, получили {driver.current_url}"
