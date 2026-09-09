@@ -4,7 +4,10 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 from pages.faq_page import FAQPage
 from pages.main_page import MainPage
-
+from dotenv import load_dotenv
+import os
+# Загружаем переменные из .env при старте pytest
+load_dotenv()
 
 @pytest.fixture(scope="function")
 def driver():
@@ -29,4 +32,7 @@ def main_page(driver, base_url):
 
 @pytest.fixture(scope="session")
 def base_url():
-    return "https://qa-scooter.praktikum-services.ru/"
+    url = os.getenv("BASE_URL")
+    if not url:
+        raise ValueError("Переменная BASE_URL не найдена в .env или переменных окружения")
+    return url
