@@ -1,31 +1,47 @@
 import allure
 import pytest
 
-
 @allure.feature("Оформление заказа")
-@allure.story("Полное оформление заказа через разные точки входа с разными данными")
 class TestOrderFlow:
 
+    @allure.story("Оформление заказа через кнопку в шапке сайта")
+    @allure.title("Заказ через шапку: {name} {surname}")
     @pytest.mark.parametrize(
-        "entry_point, name, surname, address, metro_station, color, comment",
+        "name, surname, address, metro_station, color, comment",
         [
-            ("header", "Анна", "Сидорова", "ул. Пушкина, 15", "Преображенская площадь", "black", "Позвонить за час"),
-            ("footer", "Иван", "Петров", "ул. Ленина, 1", "Сокольники", "grey", "Не звонить"),
+            ("Анна", "Сидорова", "ул. Пушкина, 15", "Преображенская площадь", "black", "Позвонить за час"),
         ],
     )
-    @allure.title("Заказ через кнопку {entry_point}: {name} {surname}")
-    def test_complete_order_flow(self, main_page, entry_point, name, surname, address, metro_station, color, comment):
-        with allure.step(f"Нажатие на кнопку «Заказать» ({entry_point})"):
-            if entry_point == "header":
-                main_page.click_order_button_header()
-            else:
-                main_page.click_order_button_footer()
+    def test_complete_order_from_header(self, main_page, name, surname, address, metro_station, color, comment):
+        with allure.step("Нажатие на кнопку «Заказать» в шапке"):
+            main_page.click_order_button_header()
 
+        self._run_common_order_flow(main_page, name, surname, address, metro_station, color, comment)
+
+
+    @allure.story("Оформление заказа через кнопку в футере сайта")
+    @allure.title("Заказ через футер: {name} {surname}")
+    @pytest.mark.parametrize(
+        "name, surname, address, metro_station, color, comment",
+        [
+            ("Иван", "Петров", "ул. Ленина, 1", "Сокольники", "grey", "Не звонить"),
+        ],
+    )
+    def test_complete_order_from_footer(self, main_page, name, surname, address, metro_station, color, comment):
+        with allure.step("Нажатие на кнопку «Заказать» в футере"):
+            main_page.click_order_button_footer()
+
+        self._run_common_order_flow(main_page, name, surname, address, metro_station, color, comment)
+
+
+    # Вспомогательный метод для общей логики 
+    @staticmethod
+    def _run_common_order_flow(page, name, surname, address, metro_station, color, comment):
         with allure.step("Проверка отображения формы заказа"):
-            assert main_page.is_order_form_visible(), "Форма заказа не отображается"
+            assert page.is_order_form_visible(), "Форма заказа не отображается"
 
         with allure.step("Заполнение первой формы заказа"):
-            main_page.fill_order_form(
+            page.fill_order_form(
                 name=name,
                 surname=surname,
                 address=address,
@@ -33,25 +49,25 @@ class TestOrderFlow:
             )
 
         with allure.step("Нажатие на кнопку «Далее»"):
-            main_page.click_next_step_button()
+            page.click_next_step_button()
 
         with allure.step("Заполнение второй формы заказа"):
-            main_page.fill_second_order_form(color=color, comment=comment)
+            page.fill_second_order_form(color=color, comment=comment)
 
         with allure.step("Нажатие на кнопку «Заказать» во второй форме"):
-            main_page.click_submit_order_button()
+            page.click_submit_order_button()
 
         with allure.step("Подтверждение заказа в модальном окне"):
-            main_page.confirm_order_in_modal()
+            page.confirm_order_in_modal()
 
         with allure.step("Проверка успешного оформления заказа"):
-            assert main_page.is_order_success_modal_visible(), \
+            assert page.is_order_success_modal_visible(), \
                 "Модальное окно с успешным заказом не появилось"
 
         with allure.step("Получение номера заказа"):
-            order_number = main_page.get_order_number()
+            order_number = page.get_order_number()
             assert order_number is not None, "Не удалось получить номер заказа"
             allure.attach(order_number, "Номер заказа", allure.attachment_type.TEXT)
 
         with allure.step("Нажатие на кнопку «Посмотреть статус»"):
-            main_page.click_status_button()
+            page.click_status_button()
