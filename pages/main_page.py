@@ -172,15 +172,20 @@ class MainPage(BasePage):
 
     @step("Закрывает всплывающее окно на Дзене (крестик)")
     def close_dzen_popup(self, timeout=15):
+        """
+        Пытается закрыть всплывающее окно на Дзене.
+        Если кнопки нет — просто ничего не делает (не выбрасывает ошибку).
+        Вся обработка исключений — внутри метода страницы, а не в тесте.
+        """
         try:
             btn = self.wait.until(
                 EC.element_to_be_clickable(MainPageLocators.DZEN_CLOSE_BTN),
                 timeout=timeout
             )
             self.driver.execute_script("arguments[0].click();", btn)
-            return True
         except Exception:
-            return False
+            # Окно либо не появилось, либо уже закрыто — это не ошибка теста
+            pass
 
 
     @step("Проверяет, что строка поиска Дзена отображается")
