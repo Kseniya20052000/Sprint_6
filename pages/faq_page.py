@@ -25,10 +25,13 @@ class FAQPage(BasePage):
         )
         return self.driver.find_element(*locator).get_attribute("aria-expanded") == "true"
 
+    
     @allure.step("Получает текст ответа по индексу вопроса")
     def get_answer_text_by_index(self, index: int) -> str:
         locator = (
             FAQPageLocators.ANSWER_PANEL[0],
             FAQPageLocators.ANSWER_PANEL[1].format(index)
         )
-        return self.driver.find_element(*locator).text
+        
+        element = self.find_visible(locator)
+        return element.text.strip()

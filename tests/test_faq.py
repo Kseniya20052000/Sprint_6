@@ -18,6 +18,7 @@ class TestFAQQuestions:
 
     @allure.story("Проверка раскрытия всех вопросов и текстов ответов в FAQ")
     @pytest.mark.parametrize("question_index, expected_text", FAQ_DATA)
+    @allure.title("FAQ: проверка раскрытия вопроса №{question_index} и текста ответа")
     def test_faq_question(self, faq_page, question_index, expected_text):
         with allure.step("Проверка отображения раздела «Вопросы о важном»"):
             assert faq_page.is_faq_section_displayed(), "Раздел не отображается"
