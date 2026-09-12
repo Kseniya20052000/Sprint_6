@@ -1,0 +1,121 @@
+[ {
+  "uid" : "c743a61b2ed99cad",
+  "name" : "FAQ: проверка раскрытия вопроса №5 и текста ответа",
+  "time" : {
+    "start" : 1789239857434,
+    "stop" : 1789239857959,
+    "duration" : 525
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "27be4bbe7510dcdc",
+  "name" : "test_yandex_logo_redirect",
+  "time" : {
+    "start" : 1788981295586,
+    "stop" : 1788981308308,
+    "duration" : 12722
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "799b813fa3adcb7b",
+  "name" : "Заказ через шапку: Анна Сидорова",
+  "time" : {
+    "start" : 1788981244937,
+    "stop" : 1788981255257,
+    "duration" : 10320
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2591f75a947296d1",
+  "name" : "FAQ: проверка раскрытия вопроса №2 и текста ответа",
+  "time" : {
+    "start" : 1789239782011,
+    "stop" : 1789239782757,
+    "duration" : 746
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4ade8f1f1b0333b0",
+  "name" : "FAQ: проверка раскрытия вопроса №3 и текста ответа",
+  "time" : {
+    "start" : 1789239807860,
+    "stop" : 1789239808442,
+    "duration" : 582
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "597bff8cb353b80c",
+  "name" : "test_logo_navigation",
+  "time" : {
+    "start" : 1788981228291,
+    "stop" : 1788981228881,
+    "duration" : 590
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "13033dbd7dbda0f3",
+  "name" : "FAQ: проверка раскрытия вопроса №0 и текста ответа",
+  "time" : {
+    "start" : 1789239733349,
+    "stop" : 1789239733666,
+    "duration" : 317
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d9cd3b705d33d88",
+  "name" : "Заказ через футер: Иван Петров",
+  "time" : {
+    "start" : 1788981278574,
+    "stop" : 1788981281536,
+    "duration" : 2962
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba69528f77d211d8",
+  "name" : "FAQ: проверка раскрытия вопроса №4 и текста ответа",
+  "time" : {
+    "start" : 1789239832616,
+    "stop" : 1789239833085,
+    "duration" : 469
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8cf321ad55047e10",
+  "name" : "FAQ: проверка раскрытия вопроса №1 и текста ответа",
+  "time" : {
+    "start" : 1789239757798,
+    "stop" : 1789239758389,
+    "duration" : 591
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "62aec7bb9386f7ab",
+  "name" : "FAQ: проверка раскрытия вопроса №6 и текста ответа",
+  "time" : {
+    "start" : 1789239882983,
+    "stop" : 1789239883363,
+    "duration" : 380
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ccc34cac6dce2de4",
+  "name" : "FAQ: проверка раскрытия вопроса №7 и текста ответа",
+  "time" : {
+    "start" : 1789239907500,
+    "stop" : 1789239908057,
+    "duration" : 557
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

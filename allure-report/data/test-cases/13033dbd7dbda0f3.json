@@ -1,0 +1,392 @@
+{
+  "uid" : "13033dbd7dbda0f3",
+  "name" : "FAQ: проверка раскрытия вопроса №0 и текста ответа",
+  "fullName" : "tests.test_faq.TestFAQQuestions#test_faq_question",
+  "historyId" : "0338f1abb868e709e94db2990f940fd4",
+  "time" : {
+    "start" : 1789239733349,
+    "stop" : 1789239733666,
+    "duration" : 317
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "faq_page",
+    "time" : {
+      "start" : 1789239720605,
+      "stop" : 1789239733347,
+      "duration" : 12742
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1789239713380,
+      "stop" : 1789239720605,
+      "duration" : 7225
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1789239713380,
+      "stop" : 1789239713380,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Проверка отображения раздела «Вопросы о важном»",
+      "time" : {
+        "start" : 1789239733350,
+        "stop" : 1789239733481,
+        "duration" : 131
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Проверяет, что раздел FAQ отображается",
+        "time" : {
+          "start" : 1789239733350,
+          "stop" : 1789239733481,
+          "duration" : 131
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Проверка отображения элемента",
+          "time" : {
+            "start" : 1789239733350,
+            "stop" : 1789239733481,
+            "duration" : 131
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Поиск видимого элемента",
+            "time" : {
+              "start" : 1789239733350,
+              "stop" : 1789239733447,
+              "duration" : 97
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('xpath', \"//div[contains(text(), 'Вопросы о важном')]\")"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "hasContent" : true,
+            "stepsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', \"//div[contains(text(), 'Вопросы о важном')]\")"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "hasContent" : true,
+          "stepsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Клик на вопрос №1",
+      "time" : {
+        "start" : 1789239733481,
+        "stop" : 1789239733606,
+        "duration" : 125
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликает на вопрос по индексу",
+        "time" : {
+          "start" : 1789239733481,
+          "stop" : 1789239733606,
+          "duration" : 125
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Клик по элементу",
+          "time" : {
+            "start" : 1789239733481,
+            "stop" : 1789239733606,
+            "duration" : 125
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Поиск кликабельного элемента",
+            "time" : {
+              "start" : 1789239733481,
+              "stop" : 1789239733526,
+              "duration" : 45
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('id', 'accordion__heading-0')"
+            }, {
+              "name" : "timeout",
+              "value" : "None"
+            } ],
+            "hasContent" : true,
+            "stepsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element_or_locator",
+            "value" : "('id', 'accordion__heading-0')"
+          } ],
+          "hasContent" : true,
+          "stepsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "index",
+          "value" : "0"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Проверка, что вопрос №1 раскрылся",
+      "time" : {
+        "start" : 1789239733606,
+        "stop" : 1789239733629,
+        "duration" : 23
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Проверяет, раскрыт ли вопрос по индексу",
+        "time" : {
+          "start" : 1789239733606,
+          "stop" : 1789239733629,
+          "duration" : 23
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "index",
+          "value" : "0"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Проверка текста ответа для вопроса №1",
+      "time" : {
+        "start" : 1789239733629,
+        "stop" : 1789239733666,
+        "duration" : 37
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Получает текст ответа по индексу вопроса",
+        "time" : {
+          "start" : 1789239733629,
+          "stop" : 1789239733666,
+          "duration" : 37
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Поиск видимого элемента",
+          "time" : {
+            "start" : 1789239733629,
+            "stop" : 1789239733644,
+            "duration" : 15
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('id', 'accordion__panel-0')"
+          }, {
+            "name" : "timeout",
+            "value" : "None"
+          } ],
+          "hasContent" : true,
+          "stepsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "index",
+          "value" : "0"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 13,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1789239733671,
+      "stop" : 1789239736700,
+      "duration" : 3029
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Проверка раскрытия всех вопросов и текстов ответов в FAQ"
+  }, {
+    "name" : "feature",
+    "value" : "FAQ Section"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_faq"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFAQQuestions"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-ITSNTCQ4"
+  }, {
+    "name" : "thread",
+    "value" : "8000-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_faq"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_text",
+    "value" : "'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'"
+  }, {
+    "name" : "question_index",
+    "value" : "0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "a17497f1b339f3eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1789239344299,
+        "stop" : 1789239344933,
+        "duration" : 634
+      }
+    }, {
+      "uid" : "a2b6d9eed9afb2c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1788981060048,
+        "stop" : 1788981060990,
+        "duration" : 942
+      }
+    }, {
+      "uid" : "75459b24456ec5ef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1788980560862,
+        "stop" : 1788980561585,
+        "duration" : 723
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "13033dbd7dbda0f3.json",
+  "parameterValues" : [ "'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'", "0" ]
+}

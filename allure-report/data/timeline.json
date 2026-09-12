@@ -1,0 +1,161 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-ITSNTCQ4",
+    "children" : [ {
+      "name" : "8000-MainThread",
+      "children" : [ {
+        "name" : "FAQ: проверка раскрытия вопроса №5 и текста ответа",
+        "uid" : "c743a61b2ed99cad",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239857434,
+          "stop" : 1789239857959,
+          "duration" : 525
+        },
+        "flaky" : false,
+        "parameters" : [ "'Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.'", "5" ]
+      }, {
+        "name" : "FAQ: проверка раскрытия вопроса №2 и текста ответа",
+        "uid" : "2591f75a947296d1",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239782011,
+          "stop" : 1789239782757,
+          "duration" : 746
+        },
+        "flaky" : false,
+        "parameters" : [ "'Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.'", "2" ]
+      }, {
+        "name" : "FAQ: проверка раскрытия вопроса №3 и текста ответа",
+        "uid" : "4ade8f1f1b0333b0",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239807860,
+          "stop" : 1789239808442,
+          "duration" : 582
+        },
+        "flaky" : true,
+        "parameters" : [ "'Только начиная с завтрашнего дня. Но скоро станем расторопнее.'", "3" ]
+      }, {
+        "name" : "FAQ: проверка раскрытия вопроса №0 и текста ответа",
+        "uid" : "13033dbd7dbda0f3",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239733349,
+          "stop" : 1789239733666,
+          "duration" : 317
+        },
+        "flaky" : false,
+        "parameters" : [ "'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'", "0" ]
+      }, {
+        "name" : "FAQ: проверка раскрытия вопроса №4 и текста ответа",
+        "uid" : "ba69528f77d211d8",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239832616,
+          "stop" : 1789239833085,
+          "duration" : 469
+        },
+        "flaky" : false,
+        "parameters" : [ "'Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.'", "4" ]
+      }, {
+        "name" : "FAQ: проверка раскрытия вопроса №1 и текста ответа",
+        "uid" : "8cf321ad55047e10",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239757798,
+          "stop" : 1789239758389,
+          "duration" : 591
+        },
+        "flaky" : false,
+        "parameters" : [ "'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.'", "1" ]
+      }, {
+        "name" : "FAQ: проверка раскрытия вопроса №6 и текста ответа",
+        "uid" : "62aec7bb9386f7ab",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239882983,
+          "stop" : 1789239883363,
+          "duration" : 380
+        },
+        "flaky" : false,
+        "parameters" : [ "'Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.'", "6" ]
+      }, {
+        "name" : "FAQ: проверка раскрытия вопроса №7 и текста ответа",
+        "uid" : "ccc34cac6dce2de4",
+        "parentUid" : "cc06fdcc798f967baff82631efcb1275",
+        "status" : "passed",
+        "time" : {
+          "start" : 1789239907500,
+          "stop" : 1789239908057,
+          "duration" : 557
+        },
+        "flaky" : true,
+        "parameters" : [ "'Да, обязательно. Всем самокатов! И Москве, и Московской области.'", "7" ]
+      } ],
+      "uid" : "cc06fdcc798f967baff82631efcb1275"
+    }, {
+      "name" : "28676-MainThread",
+      "children" : [ {
+        "name" : "test_yandex_logo_redirect",
+        "uid" : "27be4bbe7510dcdc",
+        "parentUid" : "780174ed169262b9a78116baacafd542",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788981295586,
+          "stop" : 1788981308308,
+          "duration" : 12722
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Заказ через шапку: Анна Сидорова",
+        "uid" : "799b813fa3adcb7b",
+        "parentUid" : "780174ed169262b9a78116baacafd542",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788981244937,
+          "stop" : 1788981255257,
+          "duration" : 10320
+        },
+        "flaky" : false,
+        "parameters" : [ "'ул. Пушкина, 15'", "'black'", "'Позвонить за час'", "'Преображенская площадь'", "'Анна'", "'Сидорова'" ]
+      }, {
+        "name" : "test_logo_navigation",
+        "uid" : "597bff8cb353b80c",
+        "parentUid" : "780174ed169262b9a78116baacafd542",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788981228291,
+          "stop" : 1788981228881,
+          "duration" : 590
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Заказ через футер: Иван Петров",
+        "uid" : "d9cd3b705d33d88",
+        "parentUid" : "780174ed169262b9a78116baacafd542",
+        "status" : "passed",
+        "time" : {
+          "start" : 1788981278574,
+          "stop" : 1788981281536,
+          "duration" : 2962
+        },
+        "flaky" : false,
+        "parameters" : [ "'ул. Ленина, 1'", "'grey'", "'Не звонить'", "'Сокольники'", "'Иван'", "'Петров'" ]
+      } ],
+      "uid" : "780174ed169262b9a78116baacafd542"
+    } ],
+    "uid" : "9f4ee4cb70481bb41c357290057d8635"
+  } ]
+}
