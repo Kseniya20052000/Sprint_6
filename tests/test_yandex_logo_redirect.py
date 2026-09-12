@@ -4,6 +4,7 @@ from pages.main_page import MainPage
 
 @allure.feature("Навигация по внешним ссылкам")
 @allure.story("Проверка перехода на Дзен через логотип Яндекса")
+@allure.title("Переход на Дзен: клик по логотипу, проверка URL и строки поиска")
 def test_yandex_logo_redirect(driver, base_url):
     main_page = MainPage(driver)
     main_page.open(base_url)
