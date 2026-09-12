@@ -1,5 +1,5 @@
 import random
-from allure import step
+import allure
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from locators import MainPageLocators
@@ -8,11 +8,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class MainPage(BasePage):
 
-    @step("Открывает страницу по указанному URL и ждёт полной загрузки DOM")
+    @allure.step("Открывает страницу по указанному URL и ждёт полной загрузки DOM")
     def open(self, url):
         self.open_url(url)
 
-    @step("Закрывает баннер куки (если присутствует)")
+    @allure.step("Закрывает баннер куки (если присутствует)")
     def close_cookie_banner(self):
         cookie_locator = (By.ID, "rcc-confirm-button")
         try:
@@ -23,11 +23,11 @@ class MainPage(BasePage):
 
     # --- Точки входа ---
 
-    @step("Кликает на кнопку «Заказать» в шапке сайта")
+    @allure.step("Кликает на кнопку «Заказать» в шапке сайта")
     def click_order_button_header(self):
         self.click(MainPageLocators.ORDER_BUTTON_HEADER)
 
-    @step("Кликает на кнопку «Заказать» внизу страницы (с прокруткой и обработкой перекрытия)")
+    @allure.step("Кликает на кнопку «Заказать» внизу страницы (с прокруткой и обработкой перекрытия)")
     def click_order_button_footer(self):
         self.close_cookie_banner()
         button = self.find_clickable(MainPageLocators.ORDER_BUTTON_FOOTER)
@@ -36,11 +36,11 @@ class MainPage(BasePage):
 
     # --- Первая форма ---
 
-    @step("Проверяет, что форма заказа отображается на странице")
+    @allure.step("Проверяет, что форма заказа отображается на странице")
     def is_order_form_visible(self):
         return self.is_displayed(MainPageLocators.ORDER_FORM)
 
-    @step("Получает все элементы формы заказа для дополнительной верификации")
+    @allure.step("Получает все элементы формы заказа для дополнительной верификации")
     def get_order_form_elements(self):
         elements = {}
         try:
@@ -52,7 +52,7 @@ class MainPage(BasePage):
             pass
         return elements
 
-    @step("Заполняет первую форму заказа (имя, фамилия, адрес, метро, телефон)")
+    @allure.step("Заполняет первую форму заказа (имя, фамилия, адрес, метро, телефон)")
     def fill_order_form(self, name="Иван", surname="Петров", address="ул. Ленина, 1",
                         metro_station="Преображенская площадь"):
         self.close_cookie_banner()
@@ -81,13 +81,13 @@ class MainPage(BasePage):
     def _generate_random_phone(self):
         return f"+7{random.randint(1000000000, 9999999999)}"
 
-    @step("Нажимает кнопку «Далее» на первой форме заказа")
+    @allure.step("Нажимает кнопку «Далее» на первой форме заказа")
     def click_next_step_button(self):
         self.click(MainPageLocators.NEXT_BUTTON)
 
     # --- Вторая форма ---
 
-    @step("Заполняет вторую форму заказа (дата, срок аренды, цвет самоката, комментарий)")
+    @allure.step("Заполняет вторую форму заказа (дата, срок аренды, цвет самоката, комментарий)")
     def fill_second_order_form(self, color="black", comment=":)"):
         # 1. Дата
         self.click(MainPageLocators.DATE_INPUT)
@@ -106,45 +106,45 @@ class MainPage(BasePage):
         # 4. Комментарий
         self.type_text(MainPageLocators.COMMENT_INPUT, comment)
 
-    @step("Нажимает кнопку «Заказать» на второй форме заказа")
+    @allure.step("Нажимает кнопку «Заказать» на второй форме заказа")
     def click_submit_order_button(self):
         self.click(MainPageLocators.CONFIRM_ORDER_BUTTON)
 
     # --- Модальное окно подтверждения ---
 
-    @step("Подтверждает заказ в модальном окне (нажимает «Да»)")
+    @allure.step("Подтверждает заказ в модальном окне (нажимает «Да»)")
     def confirm_order_in_modal(self):
         self.click(MainPageLocators.MODAL_CONFIRM_YES)
 
-    @step("Проверяет, что модальное окно с успешным оформлением заказа отображается")
+    @allure.step("Проверяет, что модальное окно с успешным оформлением заказа отображается")
     def is_order_success_modal_visible(self):
         return self.is_displayed(MainPageLocators.ORDER_SUCCESS_MODAL)
 
-    @step("Получает номер заказа из модального окна")
+    @allure.step("Получает номер заказа из модального окна")
     def get_order_number(self):
         try:
             return self.get_text(MainPageLocators.ORDER_NUMBER)
         except Exception:
             return None
 
-    @step("Нажимает кнопку «Посмотреть статус»")
+    @allure.step("Нажимает кнопку «Посмотреть статус»")
     def click_status_button(self):
         self.click(MainPageLocators.STATUS_BUTTON)
 
     # --- Навигация ---
 
-    @step("Кликает на логотип «Самокат» для перехода на главную")
+    @allure.step("Кликает на логотип «Самокат» для перехода на главную")
     def click_logo(self):
         self.click(MainPageLocators.LOGO_LINK)
 
-    @step("Возвращает текущий URL страницы")
+    @allure.step("Возвращает текущий URL страницы")
     def get_current_url(self):
         return super().get_current_url()
 
     # Яндекс.Дзен
 
 
-    @step("Клик по логотипу Яндекса и переключение на Дзен")
+    @allure.step("Клик по логотипу Яндекса и переключение на Дзен")
     def go_to_dzen(self):
         original = self.driver.current_window_handle
     
@@ -170,7 +170,7 @@ class MainPage(BasePage):
         return original
 
 
-    @step("Закрывает всплывающее окно на Дзене (крестик)")
+    @allure.step("Закрывает всплывающее окно на Дзене (крестик)")
     def close_dzen_popup(self, timeout=15):
         """
         Пытается закрыть всплывающее окно на Дзене.
@@ -188,6 +188,6 @@ class MainPage(BasePage):
             pass
 
 
-    @step("Проверяет, что строка поиска Дзена отображается")
+    @allure.step("Проверяет, что строка поиска Дзена отображается")
     def is_search_bar_visible(self):
         return self.is_displayed(MainPageLocators.SEARCH_BAR, timeout=15)
