@@ -1,44 +1,29 @@
 {
-  "uid" : "4fdcd3598bd422f5",
+  "uid" : "98b2503c4b70a038",
   "name" : "Заказ через шапку: Анна Сидорова",
   "fullName" : "tests.test_order.TestOrderFlow#test_complete_order_from_header",
   "historyId" : "b212caf21012fceb8f6f6e3bf2020896",
   "time" : {
-    "start" : 1788981244937,
-    "stop" : 1788981255257,
-    "duration" : 10320
+    "start" : 1788980782697,
+    "stop" : 1788980785947,
+    "duration" : 3250
   },
   "status" : "passed",
   "flaky" : false,
   "beforeStages" : [ {
-    "name" : "driver",
-    "time" : {
-      "start" : 1788981236062,
-      "stop" : 1788981243208,
-      "duration" : 7146
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
-    "shouldDisplayMessage" : false,
-    "attachmentsCount" : 0
-  }, {
     "name" : "main_page",
     "time" : {
-      "start" : 1788981243208,
-      "stop" : 1788981244935,
-      "duration" : 1727
+      "start" : 1788980773404,
+      "stop" : 1788980782695,
+      "duration" : 9291
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Открывает страницу по указанному URL и ждёт полной загрузки DOM",
       "time" : {
-        "start" : 1788981243209,
-        "stop" : 1788981244935,
-        "duration" : 1726
+        "start" : 1788980773404,
+        "stop" : 1788980782694,
+        "duration" : 9290
       },
       "status" : "passed",
       "steps" : [ ],
@@ -47,30 +32,45 @@
         "name" : "url",
         "value" : "'https://qa-scooter.praktikum-services.ru/'"
       } ],
-      "stepsCount" : 0,
       "hasContent" : true,
+      "stepsCount" : 0,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 1,
     "hasContent" : true,
+    "stepsCount" : 1,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   }, {
     "name" : "base_url",
     "time" : {
-      "start" : 1788981044210,
-      "stop" : 1788981044210,
+      "start" : 1788980550110,
+      "stop" : 1788980550110,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1788980766171,
+      "stop" : 1788980773403,
+      "duration" : 7232
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -79,92 +79,92 @@
     "steps" : [ {
       "name" : "Нажатие на кнопку «Заказать» в шапке",
       "time" : {
-        "start" : 1788981244937,
-        "stop" : 1788981252626,
-        "duration" : 7689
+        "start" : 1788980782697,
+        "stop" : 1788980783079,
+        "duration" : 382
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Кликает на кнопку «Заказать» в шапке сайта",
         "time" : {
-          "start" : 1788981244937,
-          "stop" : 1788981252626,
-          "duration" : 7689
+          "start" : 1788980782697,
+          "stop" : 1788980783079,
+          "duration" : 382
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Проверка отображения формы заказа",
       "time" : {
-        "start" : 1788981252626,
-        "stop" : 1788981252725,
-        "duration" : 99
+        "start" : 1788980783079,
+        "stop" : 1788980783250,
+        "duration" : 171
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Проверяет, что форма заказа отображается на странице",
         "time" : {
-          "start" : 1788981252626,
-          "stop" : 1788981252725,
-          "duration" : 99
+          "start" : 1788980783079,
+          "stop" : 1788980783249,
+          "duration" : 170
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Заполнение первой формы заказа",
       "time" : {
-        "start" : 1788981252725,
-        "stop" : 1788981253781,
-        "duration" : 1056
+        "start" : 1788980783250,
+        "stop" : 1788980784465,
+        "duration" : 1215
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Заполняет первую форму заказа (имя, фамилия, адрес, метро, телефон)",
         "time" : {
-          "start" : 1788981252725,
-          "stop" : 1788981253781,
-          "duration" : 1056
+          "start" : 1788980783250,
+          "stop" : 1788980784464,
+          "duration" : 1214
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "Закрывает баннер куки (если присутствует)",
           "time" : {
-            "start" : 1788981252726,
-            "stop" : 1788981252726,
+            "start" : 1788980783250,
+            "stop" : 1788980783250,
             "duration" : 0
           },
           "status" : "passed",
           "steps" : [ ],
           "attachments" : [ ],
           "parameters" : [ ],
-          "stepsCount" : 0,
           "hasContent" : false,
+          "stepsCount" : 0,
           "shouldDisplayMessage" : false,
           "attachmentsCount" : 0
         } ],
@@ -182,61 +182,61 @@
           "name" : "metro_station",
           "value" : "'Преображенская площадь'"
         } ],
-        "stepsCount" : 1,
         "hasContent" : true,
+        "stepsCount" : 1,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 2,
       "hasContent" : true,
+      "stepsCount" : 2,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Нажатие на кнопку «Далее»",
       "time" : {
-        "start" : 1788981253781,
-        "stop" : 1788981253829,
-        "duration" : 48
+        "start" : 1788980784465,
+        "stop" : 1788980784519,
+        "duration" : 54
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Нажимает кнопку «Далее» на первой форме заказа",
         "time" : {
-          "start" : 1788981253782,
-          "stop" : 1788981253829,
-          "duration" : 47
+          "start" : 1788980784465,
+          "stop" : 1788980784519,
+          "duration" : 54
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Заполнение второй формы заказа",
       "time" : {
-        "start" : 1788981253829,
-        "stop" : 1788981254999,
-        "duration" : 1170
+        "start" : 1788980784519,
+        "stop" : 1788980785674,
+        "duration" : 1155
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Заполняет вторую форму заказа (дата, срок аренды, цвет самоката, комментарий)",
         "time" : {
-          "start" : 1788981253829,
-          "stop" : 1788981254999,
-          "duration" : 1170
+          "start" : 1788980784519,
+          "stop" : 1788980785674,
+          "duration" : 1155
         },
         "status" : "passed",
         "steps" : [ ],
@@ -248,194 +248,194 @@
           "name" : "comment",
           "value" : "'Позвонить за час'"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Нажатие на кнопку «Заказать» во второй форме",
       "time" : {
-        "start" : 1788981254999,
-        "stop" : 1788981255026,
-        "duration" : 27
+        "start" : 1788980785674,
+        "stop" : 1788980785706,
+        "duration" : 32
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Нажимает кнопку «Заказать» на второй форме заказа",
         "time" : {
-          "start" : 1788981254999,
-          "stop" : 1788981255026,
-          "duration" : 27
+          "start" : 1788980785674,
+          "stop" : 1788980785706,
+          "duration" : 32
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Подтверждение заказа в модальном окне",
       "time" : {
-        "start" : 1788981255026,
-        "stop" : 1788981255110,
-        "duration" : 84
+        "start" : 1788980785706,
+        "stop" : 1788980785795,
+        "duration" : 89
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Подтверждает заказ в модальном окне (нажимает «Да»)",
         "time" : {
-          "start" : 1788981255026,
-          "stop" : 1788981255110,
-          "duration" : 84
+          "start" : 1788980785706,
+          "stop" : 1788980785795,
+          "duration" : 89
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Проверка успешного оформления заказа",
       "time" : {
-        "start" : 1788981255110,
-        "stop" : 1788981255143,
-        "duration" : 33
+        "start" : 1788980785795,
+        "stop" : 1788980785826,
+        "duration" : 31
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Проверяет, что модальное окно с успешным оформлением заказа отображается",
         "time" : {
-          "start" : 1788981255110,
-          "stop" : 1788981255143,
-          "duration" : 33
+          "start" : 1788980785795,
+          "stop" : 1788980785826,
+          "duration" : 31
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Получение номера заказа",
       "time" : {
-        "start" : 1788981255143,
-        "stop" : 1788981255166,
-        "duration" : 23
+        "start" : 1788980785826,
+        "stop" : 1788980785856,
+        "duration" : 30
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Получает номер заказа из модального окна",
         "time" : {
-          "start" : 1788981255143,
-          "stop" : 1788981255165,
-          "duration" : 22
+          "start" : 1788980785826,
+          "stop" : 1788980785855,
+          "duration" : 29
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ {
-        "uid" : "732b7c62a8ce8dec",
+        "uid" : "e5bbbcf19c1d66fb",
         "name" : "Номер заказа",
-        "source" : "732b7c62a8ce8dec.txt",
+        "source" : "e5bbbcf19c1d66fb.txt",
         "type" : "text/plain",
         "size" : 126
       } ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 1
     }, {
       "name" : "Нажатие на кнопку «Посмотреть статус»",
       "time" : {
-        "start" : 1788981255166,
-        "stop" : 1788981255257,
+        "start" : 1788980785856,
+        "stop" : 1788980785947,
         "duration" : 91
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Нажимает кнопку «Посмотреть статус»",
         "time" : {
-          "start" : 1788981255166,
-          "stop" : 1788981255256,
+          "start" : 1788980785857,
+          "stop" : 1788980785947,
           "duration" : 90
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 21,
     "hasContent" : true,
+    "stepsCount" : 21,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 1
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1788981255269,
-      "stop" : 1788981258238,
-      "duration" : 2969
+      "start" : 1788980785957,
+      "stop" : 1788980789119,
+      "duration" : 3162
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -459,7 +459,7 @@
     "value" : "LAPTOP-ITSNTCQ4"
   }, {
     "name" : "thread",
-    "value" : "28676-MainThread"
+    "value" : "26092-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -493,22 +493,12 @@
     "value" : "'Сидорова'"
   } ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ {
-      "uid" : "d253a598550cee5b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1788980782697,
-        "stop" : 1788980785947,
-        "duration" : 3250
-      }
-    } ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "4fdcd3598bd422f5.json",
+  "source" : "98b2503c4b70a038.json",
   "parameterValues" : [ "'ул. Пушкина, 15'", "'black'", "'Позвонить за час'", "'Преображенская площадь'", "'Анна'", "'Сидорова'" ]
 }

@@ -1,43 +1,43 @@
 {
-  "uid" : "cfd26e518ebbc66c",
+  "uid" : "27be4bbe7510dcdc",
   "name" : "test_yandex_logo_redirect",
   "fullName" : "tests.test_yandex_logo_redirect#test_yandex_logo_redirect",
   "historyId" : "e9920e3df0a173adc1972d32bf6c0225",
   "time" : {
-    "start" : 1788980828370,
-    "stop" : 1788980841478,
-    "duration" : 13108
+    "start" : 1788981295586,
+    "stop" : 1788981308308,
+    "duration" : 12722
   },
   "status" : "passed",
   "flaky" : false,
   "beforeStages" : [ {
     "name" : "base_url",
     "time" : {
-      "start" : 1788980550110,
-      "stop" : 1788980550110,
+      "start" : 1788981044210,
+      "stop" : 1788981044210,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   }, {
     "name" : "driver",
     "time" : {
-      "start" : 1788980821027,
-      "stop" : 1788980828369,
-      "duration" : 7342
+      "start" : 1788981288666,
+      "stop" : 1788981295585,
+      "duration" : 6919
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -46,9 +46,9 @@
     "steps" : [ {
       "name" : "Открывает страницу по указанному URL и ждёт полной загрузки DOM",
       "time" : {
-        "start" : 1788980828370,
-        "stop" : 1788980838056,
-        "duration" : 9686
+        "start" : 1788981295586,
+        "stop" : 1788981304393,
+        "duration" : 8807
       },
       "status" : "passed",
       "steps" : [ ],
@@ -57,53 +57,53 @@
         "name" : "url",
         "value" : "'https://qa-scooter.praktikum-services.ru/'"
       } ],
-      "stepsCount" : 0,
       "hasContent" : true,
+      "stepsCount" : 0,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Клик по логотипу и переключение на Дзен",
       "time" : {
-        "start" : 1788980838056,
-        "stop" : 1788980839518,
-        "duration" : 1462
+        "start" : 1788981304394,
+        "stop" : 1788981305824,
+        "duration" : 1430
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Клик по логотипу Яндекса и переключение на Дзен",
         "time" : {
-          "start" : 1788980838056,
-          "stop" : 1788980839518,
-          "duration" : 1462
+          "start" : 1788981304394,
+          "stop" : 1788981305824,
+          "duration" : 1430
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Закрытие всплывающего окна на Дзене (если есть)",
       "time" : {
-        "start" : 1788980839518,
-        "stop" : 1788980839518,
+        "start" : 1788981305824,
+        "stop" : 1788981305824,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Закрывает всплывающее окно на Дзене (крестик)",
         "time" : {
-          "start" : 1788980839518,
-          "stop" : 1788980839518,
+          "start" : 1788981305824,
+          "stop" : 1788981305824,
           "duration" : 0
         },
         "status" : "passed",
@@ -113,107 +113,107 @@
           "name" : "timeout",
           "value" : "15"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Проверка URL на Дзене",
       "time" : {
-        "start" : 1788980839518,
-        "stop" : 1788980839523,
+        "start" : 1788981305824,
+        "stop" : 1788981305829,
         "duration" : 5
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Проверка строки поиска на Дзене",
       "time" : {
-        "start" : 1788980839523,
-        "stop" : 1788980840453,
-        "duration" : 930
+        "start" : 1788981305829,
+        "stop" : 1788981306699,
+        "duration" : 870
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Проверяет, что строка поиска Дзена отображается",
         "time" : {
-          "start" : 1788980839523,
-          "stop" : 1788980840453,
-          "duration" : 930
+          "start" : 1788981305830,
+          "stop" : 1788981306699,
+          "duration" : 869
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Возврат в исходное окно",
       "time" : {
-        "start" : 1788980840453,
-        "stop" : 1788980841478,
-        "duration" : 1025
+        "start" : 1788981306699,
+        "stop" : 1788981308308,
+        "duration" : 1609
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
       "hasContent" : false,
+      "stepsCount" : 0,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 9,
     "hasContent" : true,
+    "stepsCount" : 9,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1788980841479,
-      "stop" : 1788980844762,
-      "duration" : 3283
+      "start" : 1788981308309,
+      "stop" : 1788981311862,
+      "duration" : 3553
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Проверка перехода на Дзен через логотип Яндекса"
-  }, {
     "name" : "feature",
     "value" : "Навигация по внешним ссылкам"
+  }, {
+    "name" : "story",
+    "value" : "Проверка перехода на Дзен через логотип Яндекса"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -225,7 +225,7 @@
     "value" : "LAPTOP-ITSNTCQ4"
   }, {
     "name" : "thread",
-    "value" : "26092-MainThread"
+    "value" : "28676-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -241,12 +241,22 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : true,
-  "retry" : true,
+  "hidden" : false,
+  "retry" : false,
   "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "447f7504e3c73595",
+      "status" : "passed",
+      "time" : {
+        "start" : 1788980828370,
+        "stop" : 1788980841478,
+        "duration" : 13108
+      }
+    } ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "cfd26e518ebbc66c.json",
+  "source" : "27be4bbe7510dcdc.json",
   "parameterValues" : [ ]
 }

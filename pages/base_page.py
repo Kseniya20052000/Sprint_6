@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import ElementClickInterceptedException, TimeoutException
-
+from urllib.parse import urlparse
 
 class BasePage:
     def __init__(self, driver):
@@ -142,3 +142,31 @@ class BasePage:
         else:
             element = self.find_clickable(element_or_locator)
         element.click()
+
+
+
+    # Проверка, содержит ли текущий URL подстроку
+    def is_current_url_contains(self, substring: str, timeout: int = 10) -> bool:
+        return self.wait_for_url_contains(substring, timeout=timeout)
+
+    # Закрытие текущего окна
+    def close_current_window(self):
+        self.driver.close()  
+
+    # Переключение на окно по хендлу
+    def switch_to_window(self, handle: str):
+        self.driver.switch_to.window(handle)
+
+
+    def is_current_url_on_dzen_domain(self, timeout: int = 15) -> bool:
+        """Проверяет, что текущий URL относится к домену dzen.ru (включая поддомены)"""
+        def condition(driver):
+            url = driver.current_url
+            parsed = urlparse(url)
+            return parsed.netloc.endswith("dzen.ru")
+
+        try:
+            WebDriverWait(self.driver, timeout).until(condition)
+            return True
+        except TimeoutException:
+            return False

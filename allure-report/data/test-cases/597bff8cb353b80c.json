@@ -1,61 +1,31 @@
 {
-  "uid" : "25dac3c1590f97f0",
+  "uid" : "597bff8cb353b80c",
   "name" : "test_logo_navigation",
   "fullName" : "tests.test_navigation#test_logo_navigation",
   "historyId" : "d9792cca6ff39269a7005729e131bb96",
   "time" : {
-    "start" : 1788980758617,
-    "stop" : 1788980759095,
-    "duration" : 478
+    "start" : 1788981228291,
+    "stop" : 1788981228881,
+    "duration" : 590
   },
   "description" : "\nТест: нажимаем на логотип «Самокат» → попадаем на главную страницу.\nСценарий:\n1. Открываем главную страницу.\n2. Нажимаем «Заказать» → появляется форма заказа.\n3. Нажимаем на логотип «Самокат» → переходим на главную.\n4. Проверяем, что URL совпадает с base_url.\n",
   "descriptionHtml" : "<p>Тест: нажимаем на логотип «Самокат» → попадаем на главную страницу.\nСценарий:</p>\n<ol>\n<li>Открываем главную страницу.</li>\n<li>Нажимаем «Заказать» → появляется форма заказа.</li>\n<li>Нажимаем на логотип «Самокат» → переходим на главную.</li>\n<li>Проверяем, что URL совпадает с base_url.</li>\n</ol>\n",
   "status" : "passed",
   "flaky" : false,
   "beforeStages" : [ {
-    "name" : "base_url",
-    "time" : {
-      "start" : 1788980550110,
-      "stop" : 1788980550110,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
-    "shouldDisplayMessage" : false,
-    "attachmentsCount" : 0
-  }, {
-    "name" : "driver",
-    "time" : {
-      "start" : 1788980742148,
-      "stop" : 1788980749410,
-      "duration" : 7262
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "hasContent" : false,
-    "shouldDisplayMessage" : false,
-    "attachmentsCount" : 0
-  }, {
     "name" : "main_page",
     "time" : {
-      "start" : 1788980749410,
-      "stop" : 1788980758616,
-      "duration" : 9206
+      "start" : 1788981220006,
+      "stop" : 1788981228290,
+      "duration" : 8284
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Открывает страницу по указанному URL и ждёт полной загрузки DOM",
       "time" : {
-        "start" : 1788980749410,
-        "stop" : 1788980758616,
-        "duration" : 9206
+        "start" : 1788981220006,
+        "stop" : 1788981228290,
+        "duration" : 8284
       },
       "status" : "passed",
       "steps" : [ ],
@@ -64,15 +34,45 @@
         "name" : "url",
         "value" : "'https://qa-scooter.praktikum-services.ru/'"
       } ],
-      "stepsCount" : 0,
       "hasContent" : true,
+      "stepsCount" : 0,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 1,
     "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1788981213070,
+      "stop" : 1788981220006,
+      "duration" : 6936
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1788981044210,
+      "stop" : 1788981044210,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -82,153 +82,153 @@
     "steps" : [ {
       "name" : "Открытие главной страницы сайта",
       "time" : {
-        "start" : 1788980758617,
-        "stop" : 1788980758700,
-        "duration" : 83
+        "start" : 1788981228291,
+        "stop" : 1788981228323,
+        "duration" : 32
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Возвращает текущий URL страницы",
         "time" : {
-          "start" : 1788980758617,
-          "stop" : 1788980758700,
-          "duration" : 83
+          "start" : 1788981228291,
+          "stop" : 1788981228323,
+          "duration" : 32
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Нажатие на кнопку «Заказать» в шапке сайта",
       "time" : {
-        "start" : 1788980758700,
-        "stop" : 1788980758961,
-        "duration" : 261
+        "start" : 1788981228323,
+        "stop" : 1788981228679,
+        "duration" : 356
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Кликает на кнопку «Заказать» в шапке сайта",
         "time" : {
-          "start" : 1788980758700,
-          "stop" : 1788980758961,
-          "duration" : 261
+          "start" : 1788981228323,
+          "stop" : 1788981228679,
+          "duration" : 356
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Нажатие на логотип «Самокат»",
       "time" : {
-        "start" : 1788980758961,
-        "stop" : 1788980759092,
-        "duration" : 131
+        "start" : 1788981228679,
+        "stop" : 1788981228877,
+        "duration" : 198
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Кликает на логотип «Самокат» для перехода на главную",
         "time" : {
-          "start" : 1788980758961,
-          "stop" : 1788980759092,
-          "duration" : 131
+          "start" : 1788981228679,
+          "stop" : 1788981228877,
+          "duration" : 198
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
       "name" : "Проверка, что мы вернулись на главную страницу",
       "time" : {
-        "start" : 1788980759093,
-        "stop" : 1788980759095,
-        "duration" : 2
+        "start" : 1788981228877,
+        "stop" : 1788981228881,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Возвращает текущий URL страницы",
         "time" : {
-          "start" : 1788980759093,
-          "stop" : 1788980759095,
-          "duration" : 2
+          "start" : 1788981228877,
+          "stop" : 1788981228881,
+          "duration" : 4
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 8,
     "hasContent" : true,
+    "stepsCount" : 8,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1788980759097,
-      "stop" : 1788980762097,
-      "duration" : 3000
+      "start" : 1788981228884,
+      "stop" : 1788981231991,
+      "duration" : 3107
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "Проверка перехода на главную страницу через логотип «Самокат»"
-  }, {
     "name" : "feature",
     "value" : "Навигация по сайту"
+  }, {
+    "name" : "story",
+    "value" : "Проверка перехода на главную страницу через логотип «Самокат»"
   }, {
     "name" : "parentSuite",
     "value" : "tests"
@@ -240,7 +240,7 @@
     "value" : "LAPTOP-ITSNTCQ4"
   }, {
     "name" : "thread",
-    "value" : "26092-MainThread"
+    "value" : "28676-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -256,12 +256,22 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : true,
-  "retry" : true,
+  "hidden" : false,
+  "retry" : false,
   "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "dc04330a254a59d0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1788980758617,
+        "stop" : 1788980759095,
+        "duration" : 478
+      }
+    } ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "25dac3c1590f97f0.json",
+  "source" : "597bff8cb353b80c.json",
   "parameterValues" : [ ]
 }

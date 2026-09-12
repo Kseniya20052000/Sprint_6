@@ -23,7 +23,7 @@ class FAQPage(BasePage):
             FAQPageLocators.QUESTION_BUTTON[0],
             FAQPageLocators.QUESTION_BUTTON[1].format(index)
         )
-        return self.driver.find_element(*locator).get_attribute("aria-expanded") == "true"
+        return self.get_attribute(locator, "aria-expanded") == "true"
 
     
     @allure.step("Получает текст ответа по индексу вопроса")

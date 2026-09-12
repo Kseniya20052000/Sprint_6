@@ -1,28 +1,28 @@
 {
-  "uid" : "4a6626560da9ad04",
-  "name" : "test_faq_question[4-\\u041f\\u043e\\u043a\\u0430 \\u0447\\u0442\\u043e \\u043d\\u0435\\u0442! \\u041d\\u043e \\u0435\\u0441\\u043b\\u0438 \\u0447\\u0442\\u043e-\\u0442\\u043e \\u0441\\u0440\\u043e\\u0447\\u043d\\u043e\\u0435 \\u2014 \\u0432\\u0441\\u0435\\u0433\\u0434\\u0430 \\u043c\\u043e\\u0436\\u043d\\u043e \\u043f\\u043e\\u0437\\u0432\\u043e\\u043d\\u0438\\u0442\\u044c \\u0432 \\u043f\\u043e\\u0434\\u0434\\u0435\\u0440\\u0436\\u043a\\u0443 \\u043f\\u043e \\u043a\\u0440\\u0430\\u0441\\u0438\\u0432\\u043e\\u043c\\u0443 \\u043d\\u043e\\u043c\\u0435\\u0440\\u0443 1010.]",
+  "uid" : "7dd81a7b8566c5e9",
+  "name" : "test_faq_question[1-\\u041f\\u043e\\u043a\\u0430 \\u0447\\u0442\\u043e \\u0443 \\u043d\\u0430\\u0441 \\u0442\\u0430\\u043a: \\u043e\\u0434\\u0438\\u043d \\u0437\\u0430\\u043a\\u0430\\u0437 \\u2014 \\u043e\\u0434\\u0438\\u043d \\u0441\\u0430\\u043c\\u043e\\u043a\\u0430\\u0442. \\u0415\\u0441\\u043b\\u0438 \\u0445\\u043e\\u0442\\u0438\\u0442\\u0435 \\u043f\\u043e\\u043a\\u0430\\u0442\\u0430\\u0442\\u044c\\u0441\\u044f \\u0441 \\u0434\\u0440\\u0443\\u0437\\u044c\\u044f\\u043c\\u0438, \\u043c\\u043e\\u0436\\u0435\\u0442\\u0435 \\u043f\\u0440\\u043e\\u0441\\u0442\\u043e \\u0441\\u0434\\u0435\\u043b\\u0430\\u0442\\u044c \\u043d\\u0435\\u0441\\u043a\\u043e\\u043b\\u044c\\u043a\\u043e \\u0437\\u0430\\u043a\\u0430\\u0437\\u043e\\u0432 \\u2014 \\u043e\\u0434\\u0438\\u043d \\u0437\\u0430 \\u0434\\u0440\\u0443\\u0433\\u0438\\u043c.]",
   "fullName" : "tests.test_faq.TestFAQQuestions#test_faq_question",
-  "historyId" : "83ddf51ee308186204bbad9a0074b8f4",
+  "historyId" : "0950293338d8c0fdc28a06af8f71656a",
   "time" : {
-    "start" : 1788981150057,
-    "stop" : 1788981150499,
-    "duration" : 442
+    "start" : 1788981083588,
+    "stop" : 1788981084260,
+    "duration" : 672
   },
   "status" : "passed",
   "flaky" : false,
   "beforeStages" : [ {
-    "name" : "faq_page",
+    "name" : "driver",
     "time" : {
-      "start" : 1788981142349,
-      "stop" : 1788981150056,
-      "duration" : 7707
+      "start" : 1788981068570,
+      "stop" : 1788981075557,
+      "duration" : 6987
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   }, {
@@ -36,23 +36,23 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   }, {
-    "name" : "driver",
+    "name" : "faq_page",
     "time" : {
-      "start" : 1788981135406,
-      "stop" : 1788981142348,
-      "duration" : 6942
+      "start" : 1788981075557,
+      "stop" : 1788981083587,
+      "duration" : 8030
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -61,153 +61,153 @@
     "steps" : [ {
       "name" : "Проверка отображения раздела «Вопросы о важном»",
       "time" : {
-        "start" : 1788981150057,
-        "stop" : 1788981150281,
-        "duration" : 224
+        "start" : 1788981083588,
+        "stop" : 1788981083889,
+        "duration" : 301
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Проверяет, что раздел FAQ отображается",
         "time" : {
-          "start" : 1788981150057,
-          "stop" : 1788981150281,
-          "duration" : 224
+          "start" : 1788981083588,
+          "stop" : 1788981083889,
+          "duration" : 301
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
-      "name" : "Клик на вопрос №5",
+      "name" : "Клик на вопрос №2",
       "time" : {
-        "start" : 1788981150281,
-        "stop" : 1788981150464,
-        "duration" : 183
+        "start" : 1788981083889,
+        "stop" : 1788981084154,
+        "duration" : 265
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Кликает на вопрос по индексу",
         "time" : {
-          "start" : 1788981150281,
-          "stop" : 1788981150464,
-          "duration" : 183
+          "start" : 1788981083889,
+          "stop" : 1788981084154,
+          "duration" : 265
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "index",
-          "value" : "4"
+          "value" : "1"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
-      "name" : "Проверка, что вопрос №5 раскрылся",
+      "name" : "Проверка, что вопрос №2 раскрылся",
       "time" : {
-        "start" : 1788981150464,
-        "stop" : 1788981150482,
-        "duration" : 18
+        "start" : 1788981084154,
+        "stop" : 1788981084220,
+        "duration" : 66
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Проверяет, раскрыт ли вопрос по индексу",
         "time" : {
-          "start" : 1788981150464,
-          "stop" : 1788981150482,
-          "duration" : 18
+          "start" : 1788981084154,
+          "stop" : 1788981084220,
+          "duration" : 66
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "index",
-          "value" : "4"
+          "value" : "1"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
-      "name" : "Проверка текста ответа для вопроса №5",
+      "name" : "Проверка текста ответа для вопроса №2",
       "time" : {
-        "start" : 1788981150482,
-        "stop" : 1788981150498,
-        "duration" : 16
+        "start" : 1788981084220,
+        "stop" : 1788981084260,
+        "duration" : 40
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Получает текст ответа по индексу вопроса",
         "time" : {
-          "start" : 1788981150482,
-          "stop" : 1788981150498,
-          "duration" : 16
+          "start" : 1788981084220,
+          "stop" : 1788981084259,
+          "duration" : 39
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "index",
-          "value" : "4"
+          "value" : "1"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 8,
     "hasContent" : true,
+    "stepsCount" : 8,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   },
   "afterStages" : [ {
     "name" : "driver::0",
     "time" : {
-      "start" : 1788981150503,
-      "stop" : 1788981153600,
-      "duration" : 3097
+      "start" : 1788981084269,
+      "stop" : 1788981087245,
+      "duration" : 2976
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -247,28 +247,18 @@
   } ],
   "parameters" : [ {
     "name" : "expected_text",
-    "value" : "'Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.'"
+    "value" : "'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.'"
   }, {
     "name" : "question_index",
-    "value" : "4"
+    "value" : "1"
   } ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ {
-      "uid" : "2c7684c38e0de07e",
-      "status" : "passed",
-      "time" : {
-        "start" : 1788980656845,
-        "stop" : 1788980657525,
-        "duration" : 680
-      }
-    } ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "4a6626560da9ad04.json",
-  "parameterValues" : [ "'Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.'", "4" ]
+  "source" : "7dd81a7b8566c5e9.json",
+  "parameterValues" : [ "'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.'", "1" ]
 }

@@ -1,10 +1,9 @@
 import random
 import allure
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
 from locators import MainPageLocators
 from pages.base_page import BasePage
-from selenium.webdriver.support import expected_conditions as EC
+
 
 class MainPage(BasePage):
 
@@ -143,51 +142,23 @@ class MainPage(BasePage):
 
     # Яндекс.Дзен
 
-
-    @allure.step("Клик по логотипу Яндекса и переключение на Дзен")
+    @allure.step("Клик по логотипу Яндекса и переход на Дзен")
     def go_to_dzen(self):
-        original = self.driver.current_window_handle
-    
-        self.driver.find_element(*MainPageLocators.YANDEX_LOGO).click()
-    
-        import time
-        for _ in range(30):
-            if len(self.driver.window_handles) > 1:
+        original = self.get_current_window_handle()
+        handles_before = len(self.get_window_handles())
+
+        self.click(MainPageLocators.YANDEX_LOGO)
+
+        # Ждём появления нового окна
+        self.wait_for_new_window(handles_before, timeout=15)
+
+        # Переключаемся на новое окно
+        for handle in self.get_window_handles():
+            if handle != original:
+                self.switch_to_window(handle)
                 break
-            time.sleep(1)
-    
-        for h in self.driver.window_handles:
-            if h != original:
-                self.driver.switch_to.window(h)
-                break
-    
-        # Ждём, пока URL сменится с about:blank на dzen.ru
-        for _ in range(30):
-            if "dzen.ru" in self.driver.current_url:
-                break
-            time.sleep(1)
-    
+
+        # Ждём, пока в URL появится dzen.ru
+        self.wait_for_url_contains("dzen.ru", timeout=15)
+
         return original
-
-
-    @allure.step("Закрывает всплывающее окно на Дзене (крестик)")
-    def close_dzen_popup(self, timeout=15):
-        """
-        Пытается закрыть всплывающее окно на Дзене.
-        Если кнопки нет — просто ничего не делает (не выбрасывает ошибку).
-        Вся обработка исключений — внутри метода страницы, а не в тесте.
-        """
-        try:
-            btn = self.wait.until(
-                EC.element_to_be_clickable(MainPageLocators.DZEN_CLOSE_BTN),
-                timeout=timeout
-            )
-            self.driver.execute_script("arguments[0].click();", btn)
-        except Exception:
-            # Окно либо не появилось, либо уже закрыто — это не ошибка теста
-            pass
-
-
-    @allure.step("Проверяет, что строка поиска Дзена отображается")
-    def is_search_bar_visible(self):
-        return self.is_displayed(MainPageLocators.SEARCH_BAR, timeout=15)

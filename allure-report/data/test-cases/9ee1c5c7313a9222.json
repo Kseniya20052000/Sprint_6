@@ -1,5 +1,5 @@
 {
-  "uid" : "8a9a3cc22959606f",
+  "uid" : "9ee1c5c7313a9222",
   "name" : "test_faq_question[3-\\u0422\\u043e\\u043b\\u044c\\u043a\\u043e \\u043d\\u0430\\u0447\\u0438\\u043d\\u0430\\u044f \\u0441 \\u0437\\u0430\\u0432\\u0442\\u0440\\u0430\\u0448\\u043d\\u0435\\u0433\\u043e \\u0434\\u043d\\u044f. \\u041d\\u043e \\u0441\\u043a\\u043e\\u0440\\u043e \\u0441\\u0442\\u0430\\u043d\\u0435\\u043c \\u0440\\u0430\\u0441\\u0442\\u043e\\u0440\\u043e\\u043f\\u043d\\u0435\\u0435.]",
   "fullName" : "tests.test_faq.TestFAQQuestions#test_faq_question",
   "historyId" : "fcde9331f409db328edd245c8323b17d",
@@ -23,8 +23,8 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   }, {
@@ -38,8 +38,8 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   }, {
@@ -53,8 +53,8 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -81,15 +81,15 @@
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
-        "stepsCount" : 0,
         "hasContent" : false,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
@@ -114,15 +114,15 @@
           "name" : "index",
           "value" : "3"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
@@ -147,15 +147,15 @@
           "name" : "index",
           "value" : "3"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : false,
       "attachmentsCount" : 0
     }, {
@@ -182,22 +182,22 @@
           "name" : "index",
           "value" : "3"
         } ],
-        "stepsCount" : 0,
         "hasContent" : true,
+        "stepsCount" : 0,
         "shouldDisplayMessage" : false,
         "attachmentsCount" : 0
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
       "hasContent" : true,
+      "stepsCount" : 1,
       "shouldDisplayMessage" : true,
       "attachmentsCount" : 0
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 8,
     "hasContent" : true,
+    "stepsCount" : 8,
     "shouldDisplayMessage" : true,
     "attachmentsCount" : 0
   },
@@ -212,8 +212,8 @@
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 0,
     "hasContent" : false,
+    "stepsCount" : 0,
     "shouldDisplayMessage" : false,
     "attachmentsCount" : 0
   } ],
@@ -265,6 +265,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "8a9a3cc22959606f.json",
+  "source" : "9ee1c5c7313a9222.json",
   "parameterValues" : [ "'Только начиная с завтрашнего дня. Но скоро станем расторопнее.'", "3" ]
 }
