@@ -1,0 +1,351 @@
+{
+  "uid" : "29d1b7ac59beef86",
+  "name" : "FAQ: проверка раскрытия вопроса №7 и текста ответа",
+  "fullName" : "tests.test_faq.TestFAQQuestions#test_faq_question",
+  "historyId" : "98222bd9adc5dfb82e80be27cf763fac",
+  "time" : {
+    "start" : 1789239521570,
+    "stop" : 1789239522368,
+    "duration" : 798
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Ожидаемый текст не найден.\n  Ожидался: 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'\n  Получен: ''\nassert 'Да, обязательно. Всем самокатов! И Москве, и Московской области.' in ''",
+  "statusTrace" : "self = <tests.test_faq.TestFAQQuestions object at 0x0000017385685650>, faq_page = <pages.faq_page.FAQPage object at 0x00000173855F7BD0>, question_index = 7\nexpected_text = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'\n\n    @allure.story(\"Проверка раскрытия всех вопросов и текстов ответов в FAQ\")\n    @pytest.mark.parametrize(\"question_index, expected_text\", FAQ_DATA)\n    @allure.title(\"FAQ: проверка раскрытия вопроса №{question_index} и текста ответа\")\n    def test_faq_question(self, faq_page, question_index, expected_text):\n        with allure.step(\"Проверка отображения раздела «Вопросы о важном»\"):\n            assert faq_page.is_faq_section_displayed(), \"Раздел не отображается\"\n    \n        with allure.step(f\"Клик на вопрос №{question_index + 1}\"):\n            faq_page.click_question_by_index(question_index)\n    \n        with allure.step(f\"Проверка, что вопрос №{question_index + 1} раскрылся\"):\n            assert faq_page.is_question_expanded(question_index), \"Вопрос не раскрылся\"\n    \n        with allure.step(f\"Проверка текста ответа для вопроса №{question_index + 1}\"):\n            actual_text = faq_page.get_answer_text_by_index(question_index)\n>           assert expected_text in actual_text, (\n                f\"Ожидаемый текст не найден.\\nОжидался: '{expected_text}'\\nПолучен: '{actual_text}'\"\n            )\nE           AssertionError: Ожидаемый текст не найден.\nE             Ожидался: 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'\nE             Получен: ''\nE           assert 'Да, обязательно. Всем самокатов! И Москве, и Московской области.' in ''\n\ntests\\test_faq.py:34: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "base_url",
+    "time" : {
+      "start" : 1789239324466,
+      "stop" : 1789239324467,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "faq_page",
+    "time" : {
+      "start" : 1789239511377,
+      "stop" : 1789239521569,
+      "duration" : 10192
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1789239504426,
+      "stop" : 1789239511377,
+      "duration" : 6951
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Ожидаемый текст не найден.\n  Ожидался: 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'\n  Получен: ''\nassert 'Да, обязательно. Всем самокатов! И Москве, и Московской области.' in ''",
+    "statusTrace" : "self = <tests.test_faq.TestFAQQuestions object at 0x0000017385685650>, faq_page = <pages.faq_page.FAQPage object at 0x00000173855F7BD0>, question_index = 7\nexpected_text = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'\n\n    @allure.story(\"Проверка раскрытия всех вопросов и текстов ответов в FAQ\")\n    @pytest.mark.parametrize(\"question_index, expected_text\", FAQ_DATA)\n    @allure.title(\"FAQ: проверка раскрытия вопроса №{question_index} и текста ответа\")\n    def test_faq_question(self, faq_page, question_index, expected_text):\n        with allure.step(\"Проверка отображения раздела «Вопросы о важном»\"):\n            assert faq_page.is_faq_section_displayed(), \"Раздел не отображается\"\n    \n        with allure.step(f\"Клик на вопрос №{question_index + 1}\"):\n            faq_page.click_question_by_index(question_index)\n    \n        with allure.step(f\"Проверка, что вопрос №{question_index + 1} раскрылся\"):\n            assert faq_page.is_question_expanded(question_index), \"Вопрос не раскрылся\"\n    \n        with allure.step(f\"Проверка текста ответа для вопроса №{question_index + 1}\"):\n            actual_text = faq_page.get_answer_text_by_index(question_index)\n>           assert expected_text in actual_text, (\n                f\"Ожидаемый текст не найден.\\nОжидался: '{expected_text}'\\nПолучен: '{actual_text}'\"\n            )\nE           AssertionError: Ожидаемый текст не найден.\nE             Ожидался: 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'\nE             Получен: ''\nE           assert 'Да, обязательно. Всем самокатов! И Москве, и Московской области.' in ''\n\ntests\\test_faq.py:34: AssertionError",
+    "steps" : [ {
+      "name" : "Проверка отображения раздела «Вопросы о важном»",
+      "time" : {
+        "start" : 1789239521571,
+        "stop" : 1789239521708,
+        "duration" : 137
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Проверяет, что раздел FAQ отображается",
+        "time" : {
+          "start" : 1789239521571,
+          "stop" : 1789239521708,
+          "duration" : 137
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Проверка отображения элемента",
+          "time" : {
+            "start" : 1789239521571,
+            "stop" : 1789239521708,
+            "duration" : 137
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Поиск видимого элемента",
+            "time" : {
+              "start" : 1789239521571,
+              "stop" : 1789239521669,
+              "duration" : 98
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('xpath', \"//div[contains(text(), 'Вопросы о важном')]\")"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "hasContent" : true,
+            "stepsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', \"//div[contains(text(), 'Вопросы о важном')]\")"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "hasContent" : true,
+          "stepsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Клик на вопрос №8",
+      "time" : {
+        "start" : 1789239521708,
+        "stop" : 1789239522056,
+        "duration" : 348
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликает на вопрос по индексу",
+        "time" : {
+          "start" : 1789239521708,
+          "stop" : 1789239522056,
+          "duration" : 348
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Клик по элементу",
+          "time" : {
+            "start" : 1789239521708,
+            "stop" : 1789239522055,
+            "duration" : 347
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Поиск кликабельного элемента",
+            "time" : {
+              "start" : 1789239521708,
+              "stop" : 1789239521914,
+              "duration" : 206
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "('id', 'accordion__heading-7')"
+            }, {
+              "name" : "timeout",
+              "value" : "None"
+            } ],
+            "hasContent" : true,
+            "stepsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "attachmentsCount" : 0
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "element_or_locator",
+            "value" : "('id', 'accordion__heading-7')"
+          } ],
+          "hasContent" : true,
+          "stepsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "index",
+          "value" : "7"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Проверка, что вопрос №8 раскрылся",
+      "time" : {
+        "start" : 1789239522056,
+        "stop" : 1789239522252,
+        "duration" : 196
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Проверяет, раскрыт ли вопрос по индексу",
+        "time" : {
+          "start" : 1789239522056,
+          "stop" : 1789239522252,
+          "duration" : 196
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "index",
+          "value" : "7"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Проверка текста ответа для вопроса №8",
+      "time" : {
+        "start" : 1789239522253,
+        "stop" : 1789239522364,
+        "duration" : 111
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Ожидаемый текст не найден.\n  Ожидался: 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'\n  Получен: ''\nassert 'Да, обязательно. Всем самокатов! И Москве, и Московской области.' in ''\n",
+      "statusTrace" : "  File \"C:\\Sprint_6\\tests\\test_faq.py\", line 34, in test_faq_question\n    assert expected_text in actual_text, (\n        f\"Ожидаемый текст не найден.\\nОжидался: '{expected_text}'\\nПолучен: '{actual_text}'\"\n    )\n",
+      "steps" : [ {
+        "name" : "Получает текст ответа по индексу вопроса",
+        "time" : {
+          "start" : 1789239522253,
+          "stop" : 1789239522363,
+          "duration" : 110
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "index",
+          "value" : "7"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : true,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 12,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1789239522595,
+      "stop" : 1789239525641,
+      "duration" : 3046
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "Проверка раскрытия всех вопросов и текстов ответов в FAQ"
+  }, {
+    "name" : "feature",
+    "value" : "FAQ Section"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_faq"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestFAQQuestions"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-ITSNTCQ4"
+  }, {
+    "name" : "thread",
+    "value" : "1040-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_faq"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected_text",
+    "value" : "'Да, обязательно. Всем самокатов! И Москве, и Московской области.'"
+  }, {
+    "name" : "question_index",
+    "value" : "7"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "29d1b7ac59beef86.json",
+  "parameterValues" : [ "'Да, обязательно. Всем самокатов! И Москве, и Московской области.'", "7" ]
+}
